@@ -5,32 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Shop Website</title>
 
-    <!-- Font Awesome icons -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     
-    <!-- Custom CSS -->
+ 
     <link rel="stylesheet" href="../css/bootstrap/style.css">
 </head>
 
 <body>
 
-    <!-- Load Header -->
     <div id="header"></div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> 
-<!-- Main Content -->
+
 <main>
 
     <section id="home" class="home-section">
         <div class="overlay"></div>
         <div class="home-content">
-            <h5 class="location-text">Lincoln, NE</h5>
             <h1 class="main-title">THE COFFEE HOUSE</h1>
-            <p class="subtitle">Lincoln’s Very First Coffee Shop</p>
-            <p class="since-text">Since 1987</p>
-            <a href="#about" class="btn btn-outline-light mt-5">
-                Discover More <i class="fas fa-arrow-down ms-2"></i>
-            </a>
+            <p class="subtitle">The Hearth Coffee House</p>
+            <p class="since-text">Since 2000</p>
+            
         </div>
     </section>
 
@@ -45,19 +41,18 @@
 
 
 
-    <!-- Footer (tạm thời để trống nếu bạn chưa có) -->
+ 
     <div id="footer"></div>
 
-    <!-- Load header and footer using JavaScript -->
+
     <script>
-        // Load Header
+
         fetch('../components/header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
             });
 
-        // Load Footer nếu có (ví dụ bạn làm thêm footer.html)
         fetch('../components/footer.html')
             .then(response => response.text())
             .then(data => {
