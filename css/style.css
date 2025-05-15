@@ -45,3 +45,42 @@ a {
   color:black;
   opacity: 75;
 }
+
+form .form-control {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form .btn {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+form a:hover {
+    color: #27ae60;
+}
+
+
+form a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+form a:hover {
+    color: #27ae60 !important;
+}
