@@ -1,5 +1,5 @@
 body {
-  background: #F3F2EC;
+  background: #f3f2ec;
   /* overflow-x: hidden; */
 }
 
@@ -13,25 +13,24 @@ a {
 }
 
 .section-color {
-  background: #EDEBE4;
+  background: #edebe4;
 }
 
 .card-body {
   min-height: 142px;
 }
 
-
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #F3F2EC;
+  background-color: #f3f2ec;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: #000000A6;
+  color: #000000a6;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -41,7 +40,44 @@ a {
   display: block;
 }
 
-.a:hover{
-  color:black;
+.a:hover {
+  color: black;
   opacity: 75;
+}
+
+.logo-img {
+  max-height: 60px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.product-card {
+  position: relative;
+}
+
+.action-buttons {
+  bottom: 40px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Hiện nút khi hover vào ảnh */
+.product-card:hover .action-buttons {
+  opacity: 1;
+}
+
+/* Ẩn nút khỏi layout nếu muốn */
+.action-buttons a {
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .action-buttons a {
+  pointer-events: auto;
+  transform: scale(1.05);
 }
