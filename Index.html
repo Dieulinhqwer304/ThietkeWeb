@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BoardGame</title>
 
-    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    
     <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/bootstrap_icons/bootstrap-icons.min.css">
 
@@ -64,101 +67,298 @@
                 <!-- <span class="visually-hidden">Next</span> -->
             </button>
         </div>
-
-        <div id="Sanphammoi" class="container-md">
-            <!-- Tiêu đều -->
-            <div class="text-center my-5">
-                <h1 class="mt-3 header-font">Game mới</h1>
-            </div>
-            <!-- Danh sách sản phẩm mới -->
-            <div id="dssanphammoi" class="owl-carousel owl-theme">
+        <div class="product-section-background">
+            <div id="Sanphammoi" class="container-md">
+                <!-- Tiêu đều -->
+                <div class="text-center my-5">
+                    <h1 class="mt-3 header-font text-gradient-red">Board Game mới</h1>
+                </div>
+                <!-- Danh sách sản phẩm mới -->
+                <div id="dssanphammoi" class="owl-carousel owl-theme">
+                    <div class="itemsanphammoi text-center">
+                    <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
+                        <img src="./assets/images/Game HOT & Việt Hóa/Bang.webp"
+                            class="product-img mb-3 rounded-4"
+                            alt="Bang">
+                        <p class="product-name fw-bold text-gradient-red d-block mb-1 text-center">Game Bang cực hot</p>
+                        <p class="product-price fw-bold text-gradient-red d-block mt-1">149,000₫</p>
+                        <div class="d-flex justify-content-center gap-2 mt-3">
+                            <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
+                                data-bs-target="#addGameModel" href="#">Thêm vào giỏ</a>
+                            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                        </div>  
+                    </div>
+                </div>
                 <div class="itemsanphammoi text-center">
-                <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
-                    <img src="./assets/images/Game HOT & Việt Hóa/Bang.webp"
-                        class="product-img mb-3 rounded-4"
-                        alt="Bang">
-                    <p class="product-name fw-bold text-danger">Game Bang cực hot</p>
-                    <p class="product-price fw-bold text-danger">149,000₫</p>
-                    <div class="d-flex justify-content-center gap-2 mt-3">
-                        <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
-                            data-bs-target="#addBookModal" href="#">Thêm vào giỏ</a>
-                        <a href="#" class="add-button btn btn-dark">Mua ngay</a>
-                    </div>  
+                    <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
+                        <img src="./assets/images/Game HOT & Việt Hóa/Bom Lắc.webp"
+                            class="product-img mb-3 rounded-4"
+                            alt="Bom Lắc">
+                        <p class="product-name fw-bold text-gradient-red d-block mb-1 text-center">Bom Lắc</p>
+                        <p class="product-price fw-bold text-gradient-red d-block mt-1">108,000₫</p>
+                        <div class="d-flex justify-content-center gap-2 mt-3">
+                            <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
+                                data-bs-target="#addGameModel" href="#">Thêm vào giỏ</a>
+                            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                        </div>  
+                    </div>
                 </div>
-            </div>
-            <div class="itemsanphammoi text-center">
-                <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
-                    <img src="./assets/images/Game HOT & Việt Hóa/Bom Lắc.webp"
-                        class="product-img mb-3 rounded-4"
-                        alt="Bom Lắc">
-                    <p class="product-name fw-bold text-danger">Bom Lắc</p>
-                    <p class="product-price fw-bold text-danger">108,000₫</p>
-                    <div class="d-flex justify-content-center gap-2 mt-3">
-                        <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
-                            data-bs-target="#addBookModal" href="#">Thêm vào giỏ</a>
-                        <a href="#" class="add-button btn btn-dark">Mua ngay</a>
-                    </div>  
+                <div class="itemsanphammoi text-center">
+                    <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
+                        <img src="./assets/images/Game HOT & Việt Hóa/Splendor Duel.jpg"   
+                            class="product-img mb-3 rounded-4"
+                            alt="Splendor Duel">
+                        <p class="product-name fw-bold text-gradient-red d-block mb-1 text-center">Splendor Duel</p>
+                        <p class="product-price fw-bold text-gradient-red d-block mt-1">235,000₫</p>
+                        <div class="d-flex justify-content-center gap-2 mt-3">
+                            <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
+                                data-bs-target="#addGameModel" href="#">Thêm vào giỏ</a>
+                            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                        </div>  
+                    </div>
                 </div>
-            </div>
-            <div class="itemsanphammoi text-center">
-                <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
-                    <img src="./assets/images/Game HOT & Việt Hóa/Splendor Duel.jpg"   
-                        class="product-img mb-3 rounded-4"
-                        alt="Splendor Duel">
-                    <p class="product-name fw-bold text-danger">Splendor Duel</p>
-                    <p class="product-price fw-bold text-danger">235,000₫</p>
-                    <div class="d-flex justify-content-center gap-2 mt-3">
-                        <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
-                            data-bs-target="#addBookModal" href="#">Thêm vào giỏ</a>
-                        <a href="#" class="add-button btn btn-dark">Mua ngay</a>
-                    </div>  
+                <div class="itemsanphammoi text-center">
+                    <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
+                        <img src="./assets/images/Game HOT & Việt Hóa/Cuộc Đua Sao Chổi.webp"   
+                            class="product-img mb-3 rounded-4"
+                            alt="Cuộc Đua Sao Chổi">
+                        <p class="product-name fw-bold text-gradient-red d-block mb-1 text-center">Cuộc Đua Sao Chổi</p>
+                        <p class="product-price fw-bold text-gradient-red d-block mt-1">235,000₫</p>
+                        <div class="d-flex justify-content-center gap-2 mt-3">
+                            <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
+                                data-bs-target="#addGameModel" href="#">Thêm vào giỏ</a>
+                            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                        </div>  
+                    </div>
                 </div>
-            </div>
-            <div class="itemsanphammoi text-center">
-                <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
-                    <img src="./assets/images/Game HOT & Việt Hóa/Cuộc Đua Sao Chổi.webp"   
-                        class="product-img mb-3 rounded-4"
-                        alt="Cuộc Đua Sao Chổi">
-                    <p class="product-name fw-bold text-danger">Cuộc Đua Sao Chổi</p>
-                    <p class="product-price fw-bold text-danger">235,000₫</p>
-                    <div class="d-flex justify-content-center gap-2 mt-3">
-                        <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
-                            data-bs-target="#addBookModal" href="#">Thêm vào giỏ</a>
-                        <a href="#" class="add-button btn btn-dark">Mua ngay</a>
-                    </div>  
+                <div class="itemsanphammoi text-center">
+                    <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
+                        <img src="./assets/images/Game HOT & Việt Hóa/Kho báu vua hải tặc.webp"   
+                            class="product-img mb-3 rounded-4"
+                            alt="Kho báu vua hải tặc">
+                        <p class="product-name fw-bold text-gradient-red d-block mb-1 text-center">Kho báu vua hải tặc</p>
+                        <p class="product-price fw-bold text-gradient-red d-block mt-1">235,000₫</p>
+                        <div class="d-flex justify-content-center gap-2 mt-3">
+                            <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
+                                data-bs-target="#addGameModel" href="#">Thêm vào giỏ</a>
+                            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                        </div>  
+                    </div>
                 </div>
-            </div>
-            <div class="itemsanphammoi text-center">
-                <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
-                    <img src="./assets/images/Game HOT & Việt Hóa/Kho báu vua hải tặc.webp"   
-                        class="product-img mb-3 rounded-4"
-                        alt="Kho báu vua hải tặc">
-                    <p class="product-name fw-bold text-danger">Kho báu vua hải tặc</p>
-                    <p class="product-price fw-bold text-danger">235,000₫</p>
-                    <div class="d-flex justify-content-center gap-2 mt-3">
-                        <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
-                            data-bs-target="#addBookModal" href="#">Thêm vào giỏ</a>
-                        <a href="#" class="add-button btn btn-dark">Mua ngay</a>
-                    </div>  
-                </div>
-            </div>
-            <div class="itemsanphammoi text-center">
-                <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
-                    <img src="./assets/images/Game HOT & Việt Hóa/Nối từ không.webp"   
-                        class="product-img mb-3 rounded-4"
-                        alt="Nối từ không">
-                    <p class="product-name fw-bold text-danger">Nối từ không</p>
-                    <p class="product-price fw-bold text-danger">235,000₫</p>
-                    <div class="d-flex justify-content-center gap-2 mt-3">
-                        <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
-                            data-bs-target="#addBookModal" href="#">Thêm vào giỏ</a>
-                        <a href="#" class="add-button btn btn-dark">Mua ngay</a>
+                <div class="itemsanphammoi text-center">
+                    <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
+                        <img src="./assets/images/Game HOT & Việt Hóa/Nối từ không.webp"   
+                            class="product-img mb-3 rounded-4"
+                            alt="Nối từ không">
+                        <p class="product-name fw-bold text-gradient-red d-block mb-1 text-center">Nối từ không</p>
+                        <p class="product-price fw-bold text-gradient-red d-block mt-1">235,000₫</p>
+                        <div class="d-flex justify-content-center gap-2 mt-3">
+                            <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
+                                data-bs-target="#addGameModel" href="#">Thêm vào giỏ</a>
+                            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-    <!-- Thêm các sản phẩm khác tương tự ở đây -->
-</div>
+            <div id="Gamebanchay" class="py-5 section-color">
+                <div class="container-md py-5">
+                    <div class="row justify-content-center">
+                        <div class="col-xxl-8">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <figure class="p-3 me-lg-5 bg-secondary-subtle rounded-2 d-flex justify-content-center">
+                                        <img src="./assets/images/Game vượt thời đại/Ultimate Werewolf Deluxe Edition.webp" alt="game"
+                                            class="img-fluid rounded-1">
+                                    </figure>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="spsach">
+                                        <h1 class="section-title header-font pb-lg-5 pt-3 display-5 text-gradient-red">Game bán chạy
+                                            <div class="border-top border-3 border-black w-25"></div>
+                                        </h1>
+                                        <div class="">
+                                            <h3 class="pb-3 text-gradient-red">Ma sói</h3>
+                                            <p class="py-3" style="text-align: justify;">Ma sói Ultimate hay Ultimate Werewolf Deluxe Edition là một phiên bản
+                                                của Board Game Ma sói được thiết kế bởi Ted Alspach và phát hành bởi Bézier Games.
+                                                Ma sói Ultimate có số lượng người chơi từ 5 - 75 người...</p>
+                                            <div class="fs-5 fw-bold pb-3 text-gradient-red">180.000₫</div>
+                                            <!-- font size, font weight -->
+                                            <div class="me-3">
+                                                <a class="add-button btn btn-danger mt-auto w-100" data-bs-toggle="modal"
+                                                    data-bs-target="#addGameModel" href="#">Mua ngay</a>
+                                                <input type="text" value="4" class="d-none">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="gamenoibat" class="container-md">
+                <!-- Tiêu đề -->
+                <div class="text-center my-5">
+                    <h1 class="header-font text-gradient-red">Board Game nổi bật</h1>
+                </div>
+                <div class="container mb-5">
+                    <div class="row gx-5">
+                    <!-- Sản phẩm 1 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                            <div class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100">
+                                <img src="./assets/images/Game HOT & Việt Hóa/Nối từ không.webp"
+                                    class="product-img mb-3 rounded-4"
+                                    style="object-fit: cover; width: 100%; height: 220px;"
+                                    alt="Nối từ không">
+                                    <p class="product-name fw-bold text-gradient-red d-block mb-1 text-center">Nối từ không</p>
+                                    <p class="product-price fw-bold d-block mt-1 text-center">
+                                        <span class="text-gradient-red">235,000₫</span>
+                                        <span class="text-dark text-decoration-line-through ms-2">299,000₫</span>
+                                    </p>
+                                <div class="d-flex justify-content-center gap-2 mt-3">
+                                    <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
+                                    data-bs-target="#addGameModel" href="#">Thêm vào giỏ</a>
+                                    <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 2 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                            <div class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100">
+                                <img src="./assets/images/Game HOT & Việt Hóa/Míeooo.webp"
+                                    class="product-img mb-3 rounded-4"
+                                    style="object-fit: cover; width: 100%; height: 220px;"
+                                    alt="Míeooo">
+                                    <p class="product-name fw-bold text-gradient-red d-block mb-1 text-center">Míeooo</p>
+                                    <p class="product-price fw-bold d-block mt-1 text-center">
+                                        <span class="text-gradient-red">250,000₫</span>
+                                        <span class="text-dark text-decoration-line-through ms-2">319,000₫</span>
+                                    </p>
+                                <div class="d-flex justify-content-center gap-2 mt-3">
+                                    <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
+                                    data-bs-target="#addGameModel" href="#">Thêm vào giỏ</a>
+                                    <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 3 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                            <div class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100">
+                                <img src="./assets/images/Game HOT & Việt Hóa/Ting Ting Doraemon.webp"
+                                    class="product-img mb-3 rounded-4"
+                                    style="object-fit: cover; width: 100%; height: 220px;"
+                                    alt="Ting Ting Doraemon">
+                                    <p class="product-name fw-bold text-gradient-red d-block mb-1 text-center">Ting Ting Doraemon</p>
+                                    <p class="product-price fw-bold d-block mt-1 text-center">
+                                        <span class="text-gradient-red">299,000₫</span>
+                                        <span class="text-dark text-decoration-line-through ms-2">369,000₫</span>
+                                    </p>
+                                <div class="d-flex justify-content-center gap-2 mt-3">
+                                    <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
+                                    data-bs-target="#addGameModel" href="#">Thêm vào giỏ</a>
+                                    <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 4 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                            <div class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100">
+                                <img src="./assets/images/Game HOT & Việt Hóa/Thần Tích.webp"
+                                    class="product-img mb-3 rounded-4"
+                                    style="object-fit: cover; width: 100%; height: 220px;"
+                                    alt="Thần Tích">
+                                    <p class="product-name fw-bold text-gradient-red d-block mb-1 text-center">Thần Tích</p>
+                                    <p class="product-price fw-bold d-block mt-1 text-center">
+                                        <span class="text-gradient-red">259,000₫</span>
+                                        <span class="text-dark text-decoration-line-through ms-2">300,000₫</span>
+                                    </p>
+                                <div class="d-flex justify-content-center gap-2 mt-3">
+                                    <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
+                                    data-bs-target="#addGameModel" href="#">Thêm vào giỏ</a>
+                                    <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 5 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                            <div class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100">
+                                <img src="./assets/images/Game HOT & Việt Hóa/Conan.webp"
+                                    class="product-img mb-3 rounded-4"
+                                    style="object-fit: cover; width: 100%; height: 220px;"
+                                    alt="Conan">
+                                    <p class="product-name fw-bold text-gradient-red d-block mb-1 text-center">Conan</p>
+                                    <p class="product-price fw-bold d-block mt-1 text-center">
+                                        <span class="text-gradient-red">319,000₫</span>
+                                        <span class="text-dark text-decoration-line-through ms-2">379,000₫</span>
+                                    </p>
+                                <div class="d-flex justify-content-center gap-2 mt-3">
+                                    <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
+                                    data-bs-target="#addGameModel" href="#">Thêm vào giỏ</a>
+                                    <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 6 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                            <div class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100">
+                                <img src="./assets/images/Party game  Giờ ra chơi/Uno.webp"
+                                    class="product-img mb-3 rounded-4"
+                                    style="object-fit: cover; width: 100%; height: 220px;"
+                                    alt="Uno">
+                                    <p class="product-name fw-bold text-gradient-red d-block mb-1 text-center">Uno</p>
+                                    <p class="product-price fw-bold d-block mt-1 text-center">
+                                        <span class="text-gradient-red">349,000₫</span>
+                                        <span class="text-dark text-decoration-line-through ms-2">399,000₫</span>
+                                    </p>
+                                <div class="d-flex justify-content-center gap-2 mt-3">
+                                    <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
+                                    data-bs-target="#addGameModel" href="#">Thêm vào giỏ</a>
+                                    <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 7 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                            <div class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100">
+                                <img src="./assets/images/Party game  Giờ ra chơi/Lầy Bad luck.webp"
+                                    class="product-img mb-3 rounded-4"
+                                    style="object-fit: cover; width: 100%; height: 220px;"
+                                    alt="Lầy Bad luck">
+                                    <p class="product-name fw-bold text-gradient-red d-block mb-1 text-center">Lầy Bad luck</p>
+                                    <p class="product-price fw-bold d-block mt-1 text-center">
+                                        <span class="text-gradient-red">259,000₫</span>
+                                        <span class="text-dark text-decoration-line-through ms-2">299,000₫</span>
+                                    </p>
+                                <div class="d-flex justify-content-center gap-2 mt-3">
+                                    <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
+                                    data-bs-target="#addGameModel" href="#">Thêm vào giỏ</a>
+                                    <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 8 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                            <div class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100">
+                                <img src="./assets/images/Party game  Giờ ra chơi/Vua cà phê.webp"
+                                    class="product-img mb-3 rounded-4"
+                                    style="object-fit: cover; width: 100%; height: 220px;"
+                                    alt="Vua cà phê">
+                                    <p class="product-name fw-bold text-gradient-red d-block mb-1 text-center">Vua cà phê</p>
+                                    <p class="product-price fw-bold d-block mt-1 text-center">
+                                        <span class="text-gradient-red">299,000₫</span>
+                                        <span class="text-dark text-decoration-line-through ms-2">359,000₫</span>
+                                    </p>
+                                <div class="d-flex justify-content-center gap-2 mt-3">
+                                    <a class="add-button btn btn-outline-dark" data-bs-toggle="modal"
+                                    data-bs-target="#addGameModel" href="#">Thêm vào giỏ</a>
+                                    <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
 </main>
 
 <div id="footer"></div>
