@@ -1,5 +1,5 @@
 body {
-  background: #F3F2EC;
+  background: #f3f2ec;
   /* overflow-x: hidden; */
 }
 
@@ -13,25 +13,24 @@ a {
 }
 
 .section-color {
-  background: #EDEBE4;
+  background: #edebe4;
 }
 
 .card-body {
   min-height: 142px;
 }
 
-
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #F3F2EC;
+  background-color: #f3f2ec;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: #000000A6;
+  color: #000000a6;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -41,273 +40,165 @@ a {
   display: block;
 }
 
-.a:hover{
-  color:black;
+.a:hover {
+  color: black;
   opacity: 75;
 }
 
+.logo-img {
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s;
+  border-radius: 20%;
+}
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.product-card {
+  position: relative;
+}
+
+.action-buttons {
+  bottom: 40px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Hiện nút khi hover vào ảnh */
+.product-card:hover .action-buttons {
+  opacity: 1;
+}
+
+/* Ẩn nút khỏi layout nếu muốn */
+.action-buttons a {
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .action-buttons a {
+  pointer-events: auto;
+  transform: scale(1.05);
+}
 form .form-control {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 form .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 form .btn {
-    cursor: pointer;
-    font-weight: bold;
-}
-
-form a {
-    text-decoration: none;
-    color: #000;
-    transition: color 0.3s ease;
-}
-
-form a:hover {
-    color: #27ae60;
-}
-
-
-form a {
-    text-decoration: none;
-    color: #000;
-    transition: color 0.3s ease;
-}
-
-form a:hover {
-    color: #27ae60 !important;
-}
-
-.auth-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f5f5f5;
-}
-.auth-card {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 400px;
-}
-.auth-card h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-.input-group {
-  margin-bottom: 15px;
-}
-.input-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 600;
-}
-.input-group input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-}
-.btn-red {
-  width: 100%;
-  padding: 12px;
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
 }
-.btn-red:hover {
-  background-color: #c0392b;
-}
-.link-group {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
-}
-.link-group a {
-  color: #555;
+
+form a {
   text-decoration: none;
+  color: #000;
   transition: color 0.3s ease;
 }
-.hover-red:hover {
-  color: #e74c3c !important;
+
+form a:hover {
+  color: #27ae60;
 }
 
-/* Auth form enhancements */
-.auth-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 90vh;
-  background: #f4f3f2;
+form a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease;
 }
-.auth-card {
+
+form a:hover {
+  color: #27ae60 !important;
+}
+.nav-link.active,
+.dropdown-content a.active {
+  color: #0d6efd !important;
+  font-weight: bold;
+  /* text-decoration: underline; */
+}
+
+.hover-underline-center {
   position: relative;
-  background: #fff;
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.05);
-  max-width: 380px;
-  width: 100%;
+  display: inline-block;
+  cursor: pointer;
 }
-.auth-card::before {
+
+.hover-underline-center::after {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: -5px; /* khoảng cách dưới dòng */
   left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #e63946; /* màu underline */
+  transition: all 0.3s ease;
   transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: #e74c3c;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
 }
-.auth-card h2 {
-  text-align: center;
-  margin-bottom: 28px;
-  font-size: 24px;
-  color: #2c3e50;
-}
-.input-group {
-  margin-bottom: 20px;
-}
-.input-group input {
+
+.hover-underline-center:hover::after {
   width: 100%;
-  padding: 12px 14px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 15px;
-  background: #fafafa;
 }
-.input-group input:focus {
-  outline: none;
-  border-color: #e74c3c;
-  background: #fff;
-}
-.auth-btn {
-  width: 100%;
-  padding: 12px;
-  background: #e74c3c;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
+
+.cart-header {
+  font-size: 2rem;
   font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  color: #dc3545;
 }
-.auth-btn:hover {
-  background: #c0392b;
+.cart-item {
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
-.link-group {
-  text-align: center;
-  margin-top: 18px;
+.cart-item img {
+  max-height: 100px;
+  object-fit: contain;
 }
-.link-group a {
-  color: #333;
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s ease;
+.btn-remove {
+  color: #dc3545;
 }
-.link-group a:hover {
-  color: #e74c3c;
+.summary-box {
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
 }
-
-/* Auth form styles */
-.auth-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f8f6f1;
+.checkout-btn {
+  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
 }
-
-.auth-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  padding: 40px 30px;
-  max-width: 400px;
-  width: 100%;
+.hover-zoom {
+  transition: transform 0.3s ease;
+}
+.hover-zoom:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+#searchInput::placeholder {
+  color: #6c757d;
+  transition: color 0.3s;
 }
 
-.auth-card h2 {
-  text-align: center;
-  margin-bottom: 24px;
-  color: #2c3e50;
-  font-size: 24px;
+#searchInput:focus::placeholder {
+  color: transparent;
 }
 
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: #333;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 15px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-group input:focus {
+#searchInput:focus {
   outline: none;
-  border-color: #d35400;
-  box-shadow: 0 0 5px rgba(211,84,0,0.3);
+  box-shadow: none;
 }
-
-.auth-btn {
-  width: 100%;
-  padding: 12px;
-  background-color: #d35400;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.toast-message {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
 }
-
-.auth-btn:hover {
-  background-color: #b84300;
-}
-
-.auth-alt {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.auth-alt a {
-  color: #2c3e50;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.auth-alt a:hover {
-  color: #d35400;
+.toast-message.fade {
+  opacity: 0;
 }
