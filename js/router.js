@@ -40,4 +40,8 @@ export const routes = {
     title: "Nối từ không",
     file: "pages/noitukhong.html",
   },
+  sauthanhtoan: {
+    title: "sau thanh toán",
+    file: "pages/after-payment.html",
+  },
 };
