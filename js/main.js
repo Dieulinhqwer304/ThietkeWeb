@@ -1,6 +1,7 @@
 import { routes } from "./router.js";
 import { loadImage } from "./image.js";
 import { renderCart, loadCartCount } from "./cart.js";
+import { renderDetail } from "./detail.js";
 async function loadComponent(selector, url) {
   try {
     const res = await fetch(url);
@@ -31,6 +32,11 @@ async function loadComponent(selector, url) {
     if (url.includes("cart.html") && typeof $ !== "undefined") {
       renderCart();
     }
+    if (url.includes("chi-tiet.html")) {
+      const product = JSON.parse(localStorage.getItem("chi-tiet"));
+      console.log(product)
+      renderDetail(product)
+    }
     loadCartCount();
     checkLogin();
   } catch {
@@ -45,7 +51,7 @@ async function loadPage() {
     const url = new URL(window.location.href.replace("#", ""));
     const responseCode = url.searchParams.get("vnp_ResponseCode");
     if (responseCode === "00") {
-     localStorage.removeItem("cart")
+      localStorage.removeItem("cart");
     }
     path = "sauthanhtoan";
   }

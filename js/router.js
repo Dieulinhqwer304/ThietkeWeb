@@ -36,9 +36,9 @@ export const routes = {
     file: "pages/boardgame.html",
     image: "images/game-thoi-dai",
   },
-  noitukhong: {
+  "chi-tiet": {
     title: "Nối từ không",
-    file: "pages/noitukhong.html",
+    file: "pages/chi-tiet.html",
   },
   sauthanhtoan: {
     title: "Sau thanh toán",

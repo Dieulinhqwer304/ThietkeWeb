@@ -25,7 +25,7 @@ export const imageData = {
         name: "My First Stone Age",
         price: 360000,
         oldPrice: 420000,
-        image: "My First Stone Age.jpg",
+        image: "One Night Ultimate Werewolf.webp",
       },
       {
         name: "One Night Ultimate Werewolf",
@@ -222,6 +222,8 @@ export const imageData = {
         image: "Catan Junior.webp",
         price: 370000,
         oldPrice: 430000,
+        description:
+          "'Nối Từ Không' là một boardgame giải trí thú vị giúp rèn luyện phản xạ ngôn ngữ, tư duy logic và khả năng sáng tạo từ ngữ. Người chơi sẽ lần lượt nối các từ với nhau sao cho hợp lý – nhưng không được dùng một số từ cấm! Điều đó tạo nên nhiều tình huống 'cười ra nước mắt' và những màn đối đáp siêu lầy lội.",
       },
       {
         name: "Kho báu vua hải tặc",
