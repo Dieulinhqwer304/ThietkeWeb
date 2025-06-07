@@ -23,7 +23,7 @@ export function renderCart() {
     const productHTML = `
       <div class="list-group-item cart-item d-flex justify-content-between align-items-center p-3 mb-3">
         <div class="d-flex align-items-center gap-3">
-          <img src="../assets/${item.folder}/${item.image}" alt="${item.name}"
+          <img src="assets/${item.folder}/${item.image}" alt="${item.name}"
             class="img-fluid rounded" style="width: 80px; height: 80px; object-fit: cover;">
           <div>
             <h6 class="mb-1">${item.name}</h6>

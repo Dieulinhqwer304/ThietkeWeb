@@ -29,13 +29,13 @@ export async function loadImage() {
         <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
           <div class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100">
            <img
-              src="../assets/${product.folder}/${product.image}"
+              src="assets/${product.folder}/${product.image}"
               class="product-img mb-3 rounded-4 hover-zoom"
               style="object-fit: cover; width: 100%; height: 220px; cursor: pointer;"
               alt="${product.name ?? ""}"
               data-bs-toggle="modal"
               data-bs-target="#imageModal"
-              data-image="../assets/${product.folder ?? pageData.folder}/${
+              data-image="assets/${product.folder ?? pageData.folder}/${
         product.image
       }"
             />
