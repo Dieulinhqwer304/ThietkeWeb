@@ -1,5 +1,6 @@
 import { routes } from "./router.js";
 import { loadImage } from "./image.js";
+import { renderCart, loadCartCount } from "./cart.js";
 async function loadComponent(selector, url) {
   try {
     const res = await fetch(url);
@@ -7,7 +8,6 @@ async function loadComponent(selector, url) {
     document.querySelector(selector).innerHTML = html;
     loadImage();
 
-    // Khởi tạo lại Owl Carousel nếu là trang home
     if (url.includes("home.html") && typeof $ !== "undefined") {
       setTimeout(() => {
         if (
@@ -27,6 +27,12 @@ async function loadComponent(selector, url) {
         }
       }, 0);
     }
+
+    if (url.includes("cart.html") && typeof $ !== "undefined") {
+      renderCart();
+    }
+    loadCartCount();
+    checkLogin();
   } catch {
     document.querySelector(selector).innerHTML =
       "<p>Không thể tải nội dung.</p>";
@@ -34,13 +40,23 @@ async function loadComponent(selector, url) {
 }
 
 async function loadPage() {
-  const path = window.location.hash.substring(1) || "home";
+  let path = window.location.hash.substring(1) || "home";
+  if (path.includes("sauthanhtoan")) {
+    const url = new URL(window.location.href.replace("#", ""));
+    const responseCode = url.searchParams.get("vnp_ResponseCode");
+    if (responseCode === "00") {
+     localStorage.removeItem("cart")
+    }
+    path = "sauthanhtoan";
+  }
+
   const route = routes[path];
 
   if (!route) {
     document.title = "Không tìm thấy trang";
     loadComponent("#content", "pages/404.html");
     updateActiveNav();
+
     return;
   }
 
@@ -82,6 +98,32 @@ function updateActiveNav() {
   if (!currentPath || currentPath === "#home" || currentPath === "#") {
     const homeLink = document.querySelector('.nav-link[href="./index.html"]');
     if (homeLink) homeLink.classList.add("active");
+  }
+}
+
+function checkLogin() {
+  const loginBtn = document.getElementById("login-btn");
+  const loginBtnText = document.getElementById("login-btn-text");
+  const isLogin = localStorage.getItem("isLogin") === "true";
+
+  if (isLogin) {
+    const userEmail = localStorage.getItem("userEmail") || "";
+    const username = userEmail.split("@")[0]; // Lấy phần trước dấu @
+
+    loginBtnText.innerText = `Đăng xuất (${username})`;
+
+    loginBtn.onclick = function (e) {
+      e.preventDefault();
+      if (confirm("Bạn có chắc muốn đăng xuất?")) {
+        localStorage.removeItem("isLogin");
+        localStorage.removeItem("userEmail");
+        window.location.reload();
+      }
+    };
+  } else {
+    loginBtnText.innerText = "Đăng nhập";
+    loginBtn.href = "./pages/login.html";
+    loginBtn.onclick = null; // Bỏ sự kiện đăng xuất nếu có
   }
 }
 

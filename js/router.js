@@ -41,7 +41,7 @@ export const routes = {
     file: "pages/noitukhong.html",
   },
   sauthanhtoan: {
-    title: "sau thanh toán",
+    title: "Sau thanh toán",
     file: "pages/after-payment.html",
   },
 };
