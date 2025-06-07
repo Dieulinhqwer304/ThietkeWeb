@@ -108,7 +108,7 @@ export async function loadImage() {
             </p>`
         }
       </div>`;
-    function addToCart(product) {
+    function addToCart(product, action) {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
       const existingItem = cart.find((item) => item.name === product.name);
@@ -120,7 +120,12 @@ export async function loadImage() {
 
       localStorage.setItem("cart", JSON.stringify(cart));
       loadCartCount();
-      showToast("Thành công", "Thêm vào giỏ hàng thành công!", "success");
+      if(action === 0){
+        showToast("Thành công", "Thêm vào giỏ hàng thành công!", "success");
+      }
+      if(action === 1){
+        window.location.href = "#cart"
+      }
     }
     container.innerHTML = html;
     document
@@ -130,7 +135,17 @@ export async function loadImage() {
           e.preventDefault();
           const product =
             filteredItems[(currentPage - 1) * itemsPerPage + index];
-          addToCart(product);
+          addToCart(product, 0);
+        });
+      });
+    document
+      .querySelectorAll(".add-button.btn btn-danger")
+      .forEach((button, index) => {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          const product =
+            filteredItems[(currentPage - 1) * itemsPerPage + index];
+          addToCart(product, 1);
         });
       });
     document.querySelectorAll(".product-img").forEach((img) => {

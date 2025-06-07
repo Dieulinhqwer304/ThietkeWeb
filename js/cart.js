@@ -87,10 +87,19 @@ export function renderCart() {
   });
 
   const checkoutBtn = document.getElementById("checkout-btn");
+  const isLogin = localStorage.getItem("isLogin") === "true";
   if (checkoutBtn) {
     checkoutBtn.addEventListener("click", () => {
-      const paymentUrl = createVnpayUrl(total);
-      window.location.href = paymentUrl;
+      if (!isLogin) {
+        showToast(
+          "Có lỗi xảy ra",
+          "Vui lòng đăng nhập để thanh toán!",
+          "danger"
+        );
+      } else {
+        const paymentUrl = createVnpayUrl(total);
+        window.location.href = paymentUrl;
+      }
     });
   }
 }
@@ -113,11 +122,13 @@ function createVnpayUrl(tongtien) {
   const vnp_TmnCode = "GHHNT2HB";
   const vnp_HashSecret = "BAGAOHAPRHKQZASKQZASVPRSAKPXNYXS";
   const vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-  const vnp_Returnurl = window.location.origin + "/#sauthanhtoan"; 
+  const vnp_Returnurl =
+    window.location.origin + window.location.pathname + "#sauthanhtoan";
+  console.log("vnp_Returnurl", vnp_Returnurl);
   const vnp_TxnRef = new Date()
     .toISOString()
     .replace(/[-:TZ\.]/g, "")
-    .slice(0, 14); // YmdHis
+    .slice(0, 14);
   const vnp_OrderInfo = "Thanh toán hóa đơn phí dịch vụ";
   const vnp_OrderType = "billpayment";
   const vnp_Locale = "vn";

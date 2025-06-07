@@ -108,7 +108,7 @@ function checkLogin() {
 
   if (isLogin) {
     const userEmail = localStorage.getItem("userEmail") || "";
-    const username = userEmail.split("@")[0]; // Lấy phần trước dấu @
+    const username = userEmail.split("@")[0];
 
     loginBtnText.innerText = `Đăng xuất (${username})`;
 
