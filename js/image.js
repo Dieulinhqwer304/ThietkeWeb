@@ -139,7 +139,7 @@ export async function loadImage() {
         });
       });
     document
-      .querySelectorAll(".add-button.btn btn-danger")
+      .querySelectorAll(".add-button.btn-danger")
       .forEach((button, index) => {
         button.addEventListener("click", (e) => {
           e.preventDefault();

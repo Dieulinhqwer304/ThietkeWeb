@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="./assets/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="assets/images/icon.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.min.css" />
     <link
@@ -89,5 +89,41 @@
     <script type="module" src="js/main.js"></script>
 
     <script ype="module" src="js/show-toast.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="env.js"></script>
+
+    <script>
+      (function () {
+        emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+      })();
+
+      function sendMail(e) {
+        e.preventDefault();
+
+        emailjs
+          .sendForm(
+            EMAILJS_CONFIG.SERVICE_ID,
+            EMAILJS_CONFIG.TEMPLATE_ID,
+            e.target
+          )
+          .then(
+            function (response) {
+              showToast(
+                "Thành công",
+                "Đăng ký nhận thông tin thành công!",
+                "success"
+              );
+              e.target.reset();
+            },
+            function (error) {
+              showToast(
+                "Có lỗi xảy ra",
+                "Gửi mail thất bại. Lỗi: " + JSON.stringify(error),
+                "danger"
+              );
+            }
+          );
+      }
+    </script>
   </body>
 </html>

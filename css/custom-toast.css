@@ -66,11 +66,12 @@
   opacity: 0.6;
 }
 
-.toast.text-bg-success {
-  background: linear-gradient(135deg, #3db7f4, #1ea1f2); 
-  border-left: 4px solid #1ea1f2;
+.toast.text-bg-primary {
+  background: linear-gradient(135deg, #007aff, rgb(9, 143, 226)); 
+  border-left: 4px solid #007aff;
   color: white;
 }
+
 .toast.text-bg-danger {
   background: linear-gradient(135deg, #dc3545, #b02a37);
   border-left: 4px solid #b02a37;
@@ -90,8 +91,8 @@
 }
 
 .toast.text-bg-primary {
-  background: linear-gradient(135deg, #3db7f4, #1ea1f2); 
-  border-left: 4px solid #1ea1f2;
+  background: linear-gradient(135deg, #007aff, rgb(9, 143, 226)); 
+  border-left: 4px solid #007aff;
   color: white;
 }
 
