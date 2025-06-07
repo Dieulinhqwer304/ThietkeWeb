@@ -1,0 +1,102 @@
+.toast {
+  position: relative;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffffff0a, #ffffff05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  min-width: 340px;
+  max-width: 400px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.toast.show {
+  animation: slideIn 0.4s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toast-header {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.toast-header i {
+  font-size: 1.3rem;
+}
+
+.toast-header strong {
+  font-size: 1.05rem;
+  font-weight: 600;
+  flex-grow: 1;
+  color: #ffffff;
+}
+
+.toast-header small {
+  color: #ddd;
+  font-size: 0.8rem;
+}
+
+.toast-body {
+  font-size: 0.95rem;
+  color: #efefef;
+  line-height: 1.5;
+}
+
+.toast .btn-close {
+  filter: invert(1);
+  opacity: 0.6;
+}
+
+.toast.text-bg-primary {
+  background: linear-gradient(135deg, #007aff, rgb(9, 143, 226)); 
+  border-left: 4px solid #007aff;
+  color: white;
+}
+
+.toast.text-bg-danger {
+  background: linear-gradient(135deg, #dc3545, #b02a37);
+  border-left: 4px solid #b02a37;
+  color: white;
+}
+
+.toast.text-bg-warning {
+  background: linear-gradient(135deg, #ffc107, #e0a800);
+  border-left: 4px solid #e0a800;
+  color: #222;
+}
+
+.toast.text-bg-info {
+  background: linear-gradient(135deg, #0dcaf0, #31d2f2);
+  border-left: 4px solid #0dcaf0;
+  color: #111;
+}
+
+.toast.text-bg-primary {
+  background: linear-gradient(135deg, #007aff, rgb(9, 143, 226)); 
+  border-left: 4px solid #007aff;
+  color: white;
+}
+
+.toast-container {
+  z-index: 1080;
+  padding: 1rem;
+}

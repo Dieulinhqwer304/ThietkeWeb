@@ -195,10 +195,5 @@ form a:hover {
   outline: none;
   box-shadow: none;
 }
-.toast-message {
-  transition: opacity 0.5s ease-in-out;
-  opacity: 1;
-}
-.toast-message.fade {
-  opacity: 0;
-}
+/* --------------- */
+/*vưa them*/

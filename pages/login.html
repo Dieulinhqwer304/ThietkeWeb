@@ -1,21 +1,115 @@
-<!--#include virtual="../components/header.html" -->
-<link rel="stylesheet" href="../css/style.css" />
+<!--#include virtual="components/header.html" -->
+<link rel="stylesheet" href="css/style.css" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 
-<div
-  class="container"
-  style="
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 30px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #d63a44, #b32b37);
+    margin: 0;
+    padding: 0;
+  }
+
+  .login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 40px 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.7s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .login-container h2 {
+    text-align: center;
+    color: #d63a44;
+    margin-bottom: 25px;
+    font-weight: 600;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
     border-radius: 10px;
-  "
->
-  <h2 style="text-align: center; margin-bottom: 20px">Đăng nhập</h2>
+    font-size: 14px;
+    transition: 0.3s ease;
+  }
+
+  .form-control:focus {
+    border-color: #d63a44;
+    outline: none;
+    box-shadow: 0 0 5px rgba(214, 58, 68, 0.4);
+  }
+
+  .btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #d63a44;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .btn-submit:hover {
+    background: #b32b37;
+  }
+
+  .login-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .login-footer a {
+    color: #d63a44;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .login-footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<div class="login-container">
+  <h2><i class="fas fa-sign-in-alt"></i> Đăng nhập</h2>
   <form id="loginForm">
     <div class="form-group">
-      <label for="email">Email:</label>
+      <label for="email"><i class="fas fa-envelope"></i> Email</label>
       <input
         type="email"
         id="email"
@@ -24,8 +118,8 @@
         placeholder="Nhập email của bạn"
       />
     </div>
-    <div class="form-group" style="margin-top: 10px">
-      <label for="password">Mật khẩu:</label>
+    <div class="form-group">
+      <label for="password"><i class="fas fa-lock"></i> Mật khẩu</label>
       <input
         type="password"
         id="password"
@@ -34,25 +128,11 @@
         placeholder="Nhập mật khẩu"
       />
     </div>
-    <div style="text-align: center; margin-top: 20px">
-      <button
-        type="submit"
-        class="btn"
-        style="
-          padding: 10px 20px;
-          background-color: #d35400;
-          color: white;
-          border: none;
-          border-radius: 5px;
-        "
-      >
-        Đăng nhập
-      </button>
-    </div>
+    <button type="submit" class="btn-submit">Đăng nhập</button>
   </form>
-  <p style="text-align: center; margin-top: 15px">
+  <div class="login-footer">
     Chưa có tài khoản? <a href="register.html">Đăng ký ngay</a>
-  </p>
+  </div>
 </div>
 
 <script>
@@ -65,10 +145,10 @@
       alert("Vui lòng điền đầy đủ thông tin.");
       return;
     }
-
-    alert("Đăng nhập thành công!");
-    window.location.href = "../Index.html";
+    localStorage.setItem("isLogin", "true");
+    localStorage.setItem("userEmail", email);
+    window.location.href = "../index.html";
   });
 </script>
 
-<!--#include virtual="../components/footer.html" -->
+<!--#include virtual="components/footer.html" -->
