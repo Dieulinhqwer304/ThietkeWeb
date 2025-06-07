@@ -132,8 +132,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const cleanPath = location.pathname.replace(/\/index\.html$/i, "/");
     history.replaceState({}, "", cleanPath);
   }
-  loadComponent("#header", "../components/header.html");
-  loadComponent("#footer", "../components/footer.html");
+  loadComponent("#header", "components/header.html");
+  loadComponent("#footer", "components/footer.html");
 
   loadPage();
 });
