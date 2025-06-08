@@ -94,7 +94,7 @@ export const imageData = {
     name: "Board Game Hot",
     item: [
       { name: "Avalon", image: "Avalon.jpg", price: 370000, oldPrice: 430000, description: "Avalon là một trò chơi xã hội nơi người chơi đóng vai các nhân vật trong truyền thuyết Arthurian, cố gắng hoàn thành nhiệm vụ của mình trong khi phát hiện ra ai là kẻ phản bội." },
-      { name: "Bang!", image: "Bang!.webp", price: 370000, oldPrice: 430000, description: "Bang! là một trò chơi bài chiến thuật nơi người chơi đóng vai các nhân vật trong miền Tây hoang dã, cố gắng tiêu diệt nhau bằng cách sử dụng các lá bài đặc biệt." },
+      { name: "Bang!", image: "Bang.webp", price: 370000, oldPrice: 430000, description: "Bang! là một trò chơi bài chiến thuật nơi người chơi đóng vai các nhân vật trong miền Tây hoang dã, cố gắng tiêu diệt nhau bằng cách sử dụng các lá bài đặc biệt." },
       {
         name: "Bom Lắc",
         image: "Bom Lắc.webp",

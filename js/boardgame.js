@@ -34,9 +34,6 @@ export async function loadImage() {
               class="product-img mb-3 rounded-4 hover-zoom"
               style="object-fit: cover; width: 100%; height: 220px; cursor: pointer;"
               alt="${product.name ?? ""}"
-              data-image="assets/${product.folder ?? pageData.folder}/${
-        product.image
-      }"
             />
             <p class="product-name fw-bold text-gradient-red d-block mb-1 text-center">
               ${product.name ?? ""}
@@ -193,7 +190,7 @@ export function addToCart(product, action = false, quantity = 1) {
 
   const existingItem = cart.find((item) => item.name === product.name);
   if (existingItem) {
-    existingItem.quantity += 1;
+    existingItem.quantity += quantity;
   } else {
     cart.push({ ...product, quantity: quantity });
   }

@@ -52,6 +52,7 @@ export function renderDetail() {
 
   if (addCart) {
     addCart.onclick = () => {
+      console.log(quantity)
       addToCart(product, 0, quantity);
     };
   }
