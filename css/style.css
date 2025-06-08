@@ -196,8 +196,12 @@ form a:hover {
   outline: none;
   box-shadow: none;
 }
-
-.owl-nav{
+#backToTop:hover,
+.btn-contact:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.owl-nav {
   display: none;
 }
 
@@ -221,8 +225,8 @@ body {
   max-width: 960px;
   z-index: 1;
   font-size: 2em;
-  color: #333;  
-  z-index: -11  ;
+  color: #333;
+  z-index: -11;
 }
 
 .body__mainTitle {
