@@ -149,12 +149,6 @@ function createVnpayUrl(tongtien) {
   const vnp_HashSecret = "BAGAOHAPRHKQZASKQZASVPRSAKPXNYXS";
   const vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
   const vnp_Returnurl = window.location.href.split("#")[0] + "#sauthanhtoan";
-  localStorage.setItem(
-    "vnp_Returnurl",
-    window.location.origin + window.location.pathname + "#sauthanhtoan"
-  );
-  localStorage.setItem("vnp_Returnurl2", vnp_Returnurl);
-
   const vnp_TxnRef = new Date()
     .toISOString()
     .replace(/[-:TZ\.]/g, "")
