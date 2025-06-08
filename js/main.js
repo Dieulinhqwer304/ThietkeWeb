@@ -112,14 +112,14 @@ function checkLogin() {
         if (result.isConfirmed) {
           localStorage.removeItem("isLogin");
           localStorage.removeItem("userEmail");
-          window.location.href = "/";
+          window.location.href = "index.html";
         }
       });
     };
   } else {
     loginBtnText.innerText = "Đăng nhập";
     loginBtn.href = "./pages/login.html";
-    loginBtn.onclick = null; // Bỏ sự kiện đăng xuất nếu có
+    loginBtn.onclick = null;
   }
 }
 

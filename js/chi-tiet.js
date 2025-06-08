@@ -28,7 +28,7 @@ export function renderDetail() {
   const minusBtn = document.getElementById("minusButton");
   const plusBtn = document.getElementById("plusButton");
 
-  let quantity = 1; // mặc định số lượng ban đầu
+  let quantity = 1;
 
   const updateQuantityDisplay = () => {
     if (quantityEl) quantityEl.textContent = quantity;
