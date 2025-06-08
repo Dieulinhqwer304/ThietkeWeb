@@ -28,13 +28,12 @@ export async function loadImage() {
       bodySection += `
         <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
           <div class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100">
+           <div>
            <img
               src="assets/${product.folder}/${product.image}"
               class="product-img mb-3 rounded-4 hover-zoom"
               style="object-fit: cover; width: 100%; height: 220px; cursor: pointer;"
               alt="${product.name ?? ""}"
-              data-bs-toggle="modal"
-              data-bs-target="#imageModal"
               data-image="assets/${product.folder ?? pageData.folder}/${
         product.image
       }"
@@ -51,6 +50,7 @@ export async function loadImage() {
                   product.oldPrice ? product.oldPrice.toLocaleString() : 500000
                 }₫</span>
             </p>
+           </div>
             <div class="d-flex justify-content-center gap-2 mt-3">
               <a class="add-button btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#addGameModel" href="#">Thêm vào giỏ</a>
               <a href="#cart" class="add-button btn btn-danger">Mua ngay</a>
@@ -120,11 +120,11 @@ export async function loadImage() {
 
       localStorage.setItem("cart", JSON.stringify(cart));
       loadCartCount();
-      if(action === 0){
+      if (action === 0) {
         showToast("Thành công", "Thêm vào giỏ hàng thành công!", "success");
       }
-      if(action === 1){
-        window.location.href = "#cart"
+      if (action === 1) {
+        window.location.href = "#cart";
       }
     }
     container.innerHTML = html;
@@ -148,10 +148,11 @@ export async function loadImage() {
           addToCart(product, 1);
         });
       });
-    document.querySelectorAll(".product-img").forEach((img) => {
+    document.querySelectorAll(".product-img").forEach((img, index) => {
       img.addEventListener("click", () => {
-        const imageSrc = img.getAttribute("data-image");
-        document.getElementById("modalImage").src = imageSrc;
+        const product = filteredItems[(currentPage - 1) * itemsPerPage + index];
+        localStorage.setItem("chi-tiet",JSON.stringify(product))
+        window.location.href = `#chi-tiet`;
       });
     });
     const searchButton = document.getElementById("searchButton");

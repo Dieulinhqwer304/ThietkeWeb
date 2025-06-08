@@ -28,8 +28,12 @@ export const imageData = {
         name: "My First Stone Age",
         price: 360000,
         oldPrice: 420000,
+<<<<<<< HEAD
         image: "My First Stone Age.jpg",
         description: "My First Stone Age là phiên bản đơn giản của trò chơi Stone Age, nơi trẻ em có thể học cách thu thập tài nguyên và xây dựng các công trình trong thời kỳ đồ đá.",
+=======
+        image: "One Night Ultimate Werewolf.webp",
+>>>>>>> 03bc4db6e76e6ffafda1e408fbae018635e87ef8
       },
       {
         name: "One Night Ultimate Werewolf",
@@ -254,7 +258,12 @@ export const imageData = {
         image: "Catan Junior.webp",
         price: 370000,
         oldPrice: 430000,
+<<<<<<< HEAD
         description: "Catan Junior là phiên bản dành cho trẻ em của trò chơi Catan, nơi người chơi xây dựng các khu định cư và thu thập tài nguyên trong một thế giới hòn đảo.",
+=======
+        description:
+          "'Nối Từ Không' là một boardgame giải trí thú vị giúp rèn luyện phản xạ ngôn ngữ, tư duy logic và khả năng sáng tạo từ ngữ. Người chơi sẽ lần lượt nối các từ với nhau sao cho hợp lý – nhưng không được dùng một số từ cấm! Điều đó tạo nên nhiều tình huống 'cười ra nước mắt' và những màn đối đáp siêu lầy lội.",
+>>>>>>> 03bc4db6e76e6ffafda1e408fbae018635e87ef8
       },
       {
         name: "Kho báu vua hải tặc",
