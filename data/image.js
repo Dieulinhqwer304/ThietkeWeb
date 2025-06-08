@@ -28,7 +28,7 @@ export const imageData = {
         name: "My First Stone Age",
         price: 360000,
         oldPrice: 420000,
-        image: "My First Stone Age.jpg",
+        image: "my_fisrt_stone_age.webp",
         description: "My First Stone Age là phiên bản đơn giản của trò chơi Stone Age, nơi trẻ em có thể học cách thu thập tài nguyên và xây dựng các công trình trong thời kỳ đồ đá.",
       },
       {
