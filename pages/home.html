@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="css/chi-tiet.css" />
+
 <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <!-- Tạo thanh chỉ báo bên dưới -->
   <div class="carousel-indicators">
@@ -54,7 +56,6 @@
     data-bs-slide="prev"
   >
     <span class="carousel-control-prev-icon"></span>
-    <!-- <span class="visually-hidden">Previous</span> -->
   </button>
   <button
     class="carousel-control-next"
@@ -63,7 +64,6 @@
     data-bs-slide="next"
   >
     <span class="carousel-control-next-icon"></span>
-    <!-- <span class="visually-hidden">Next</span> -->
   </button>
 </div>
 <div class="product-section-background">
@@ -73,165 +73,225 @@
     </div>
     <div id="dssanphammois" class="owl-carousel owl-theme">
       <div class="itemsanphammoi text-center">
-        <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
+        <div
+          class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
+        >
           <img
-            src="./assets/images/game-hot/Bang.webp"
+            src="assets/images/game-hot/Bang.webp"
             class="product-img mb-3 rounded-4"
             alt="Bang"
+            data-product='{"name":"Bang!","image":"Bang.webp","price":320000,"oldPrice":390000,"folder":"images/game-hot" , "description":"Bang! là một trò chơi bài chiến thuật vui nhộn, nơi người chơi vào vai các nhân vật miền Tây hoang dã. Mục tiêu là tiêu diệt các đối thủ trong khi bảo vệ bản thân và đồng đội của mình."}'
           />
           <p
             class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
           >
-            Game Bang cực hot
+            Bang!
           </p>
-          <p class="product-price fw-bold text-gradient-red d-block mt-1">
-            149,000₫
+          <p class="product-price fw-bold d-block mt-1 text-center">
+            <span class="text-gradient-red">320,000₫</span>
+            <span class="text-dark text-decoration-line-through ms-2"
+              >390,000₫</span
+            >
           </p>
           <div class="d-flex justify-content-center gap-2 mt-3">
-            <a
-              class="add-button btn btn-outline-dark"
-              data-bs-toggle="modal"
-              data-bs-target="#addGameModel"
-              href="#"
-              >Thêm vào giỏ</a
+            <button
+              class="add-button btn btn-outline-dark btn-add-cart"
+              data-product='{"name":"Bang!","image":"Bang.webp","price":320000,"oldPrice":390000,"folder":"images/game-hot","description":"Bang! là một trò chơi bài chiến thuật vui nhộn, nơi người chơi vào vai các nhân vật miền Tây hoang dã. Mục tiêu là tiêu diệt các đối thủ trong khi bảo vệ bản thân và đồng đội của mình. Trò chơi này"}'
             >
-            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+              Thêm vào giỏ
+            </button>
+            <button
+              class="add-button btn btn-danger btn-buy-now"
+              data-product='{"name":"Bang!","image":"Bang.webp","price":320000,"oldPrice":390000,"folder":"images/game-hot","description":"Bang! là một trò chơi bài chiến thuật vui nhộn جایی mà người chơi sẽ nhập vai vào các nhân vật miền Tây hoang dã. Mục tiêu là tiêu diệt đối thủ trong khi bảo vệ bản thân và đồng đội của mình."}'
+            >
+              Mua ngay
+            </button>
           </div>
         </div>
       </div>
       <div class="itemsanphammoi text-center">
-        <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
+        <div
+          class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
+        >
           <img
             src="./assets/images/game-hot/Bom Lắc.webp"
             class="product-img mb-3 rounded-4"
             alt="Bom Lắc"
+            data-product='{"name":"Bom Lắc","image":"Bom Lắc.webp","price":108000,"oldPrice":150000,"folder":"images/game-hot","description":"Bom Lắc là một trò chơi vui nhộn, nơi người chơi cạnh tranh để tránh bị nổ bởi quả bom lắc đầy bất ngờ."}'
           />
           <p
             class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
           >
             Bom Lắc
           </p>
-          <p class="product-price fw-bold text-gradient-red d-block mt-1">
-            108,000₫
+          <p class="product-price fw-bold d-block mt-1 text-center">
+            <span class="text-gradient-red">108,000₫</span>
+            <span class="text-dark text-decoration-line-through ms-2"
+              >150,000₫</span
+            >
           </p>
           <div class="d-flex justify-content-center gap-2 mt-3">
-            <a
-              class="add-button btn btn-outline-dark"
-              data-bs-toggle="modal"
-              data-bs-target="#addGameModel"
-              href="#"
-              >Thêm vào giỏ</a
+            <button
+              class="add-button btn btn-outline-dark btn-add-cart"
+              data-product='{"name":"Bom Lắc","image":"Bom Lắc.webp","price":108000,"oldPrice":150000,"folder":"images/game-hot","description":"Bom Lắc là một trò chơi vui nhộn, nơi người chơi cạnh tranh để tránh bị nổ bởi quả bom lắc đầy bất ngờ."}'
             >
-            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+              Thêm vào giỏ
+            </button>
+            <button
+              class="add-button btn btn-danger btn-buy-now"
+              data-product='{"name":"Bom Lắc","image":"Bom Lắc.webp","price":108000,"oldPrice":150000,"folder":"images/game-hot","description":"Bom Lắc là một trò chơi vui nhộn, nơi người chơi cạnh tranh để tránh bị nổ bởi quả bom lắc đầy bất ngờ."}'
+            >
+              Mua ngay
+            </button>
           </div>
         </div>
       </div>
       <div class="itemsanphammoi text-center">
-        <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
+        <div
+          class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
+        >
           <img
             src="./assets/images/game-hot/Splendor Duel.jpg"
             class="product-img mb-3 rounded-4"
             alt="Splendor Duel"
+            data-product='{"name":"Splendor Duel","image":"Splendor Duel.jpg","price":235000,"oldPrice":300000,"folder":"images/game-hot","description":"Splendor Duel là trò chơi chiến thuật hai người, nơi bạn thu thập đá quý và xây dựng chiến lược để trở thành thương gia giỏi nhất."}'
           />
           <p
             class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
           >
             Splendor Duel
           </p>
-          <p class="product-price fw-bold text-gradient-red d-block mt-1">
-            235,000₫
+          <p class="product-price fw-bold d-block mt-1 text-center">
+            <span class="text-gradient-red">235,000₫</span>
+            <span class="text-dark text-decoration-line-through ms-2"
+              >300,000₫</span
+            >
           </p>
           <div class="d-flex justify-content-center gap-2 mt-3">
-            <a
-              class="add-button btn btn-outline-dark"
-              data-bs-toggle="modal"
-              data-bs-target="#addGameModel"
-              href="#"
-              >Thêm vào giỏ</a
+            <button
+              class="add-button btn btn-outline-dark btn-add-cart"
+              data-product='{"name":"Splendor Duel","image":"Splendor Duel.jpg","price":235000,"oldPrice":300000,"folder":"images/game-hot","description":"Splendor Duel là trò chơi chiến thuật hai người, nơi bạn thu thập đá quý và xây dựng chiến lược để trở thành thương gia giỏi nhất."}'
             >
-            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+              Thêm vào giỏ
+            </button>
+            <button
+              class="add-button btn btn-danger btn-buy-now"
+              data-product='{"name":"Splendor Duel","image":"Splendor Duel.jpg","price":235000,"oldPrice":300000,"folder":"images/game-hot","description":"Splendor Duel là trò chơi chiến thuật hai người, nơi bạn thu thập đá quý và xây dựng chiến lược để trở thành thương gia giỏi nhất."}'
+            >
+              Mua ngay
+            </button>
           </div>
         </div>
       </div>
       <div class="itemsanphammoi text-center">
-        <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
+        <div
+          class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
+        >
+          0
           <img
             src="./assets/images/game-hot/Cuộc Đua Sao Chổi.webp"
             class="product-img mb-3 rounded-4"
             alt="Cuộc Đua Sao Chổi"
+            data-product='{"name":"Cuộc Đua Sao Chổi","image":"Cuộc Đua Sao Chổi.webp","price":235000,"oldPrice":300000,"folder":"images/game-hot","description":"Cuộc Đua Sao Chổi là một trò chơi phiêu lưu không gian, nơi người chơi cạnh tranh để thu thập tài nguyên và chinh phục các vì sao."}'
           />
           <p
             class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
           >
             Cuộc Đua Sao Chổi
           </p>
-          <p class="product-price fw-bold text-gradient-red d-block mt-1">
-            235,000₫
+          <p class="product-price fw-bold d-block mt-1 text-center">
+            <span class="text-gradient-red">235,000₫</span>
+            <span class="text-dark text-decoration-line-through ms-2"
+              >300,000₫</span
+            >
           </p>
           <div class="d-flex justify-content-center gap-2 mt-3">
-            <a
-              class="add-button btn btn-outline-dark"
-              data-bs-toggle="modal"
-              data-bs-target="#addGameModel"
-              href="#"
-              >Thêm vào giỏ</a
+            <button
+              class="add-button btn btn-outline-dark btn-add-cart"
+              data-product='{"name":"Cuộc Đua Sao Chổi","image":"Cuộc Đua Sao Chổi.webp","price":235000,"oldPrice":300000,"folder":"images/game-hot","description":"Cuộc Đua Sao Chổi là một trò chơi phiêu lưu không gian, nơi người chơi cạnh tranh để thu thập tài nguyên và chinh phục các vì sao."}'
             >
-            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+              Thêm vào giỏ
+            </button>
+            <button
+              class="add-button btn btn-danger btn-buy-now"
+              data-product='{"name":"Cuộc Đua Sao Chổi","image":"Cuộc Đua Sao Chổi.webp","price":235000,"oldPrice":300000,"folder":"images/game-hot","description":"Cuộc Đua Sao Chổi là một trò chơi phiêu lưu không gian, nơi người chơi cạnh tranh để thu thập tài nguyên và chinh phục các vì sao."}'
+            >
+              Mua ngay
+            </button>
           </div>
         </div>
       </div>
       <div class="itemsanphammoi text-center">
-        <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
+        <div
+          class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
+        >
           <img
             src="./assets/images/game-hot/Kho báu vua hải tặc.webp"
             class="product-img mb-3 rounded-4"
             alt="Kho báu vua hải tặc"
+            data-product='{"name":"Kho báu vua hải tặc","image":"Kho báu vua hải tặc.webp","price":235000,"oldPrice":300000,"folder":"images/game-hot","description":"Kho báu vua hải tặc là trò chơi phiêu lưu trên biển, nơi bạn dẫn dắt băng hải tặc của mình đi tìm kho báu huyền thoại."}'
           />
           <p
             class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
           >
             Kho báu vua hải tặc
           </p>
-          <p class="product-price fw-bold text-gradient-red d-block mt-1">
-            235,000₫
+          <p class="product-price fw-bold d-block mt-1 text-center">
+            <span class="text-gradient-red">235,000₫</span>
+            <span class="text-dark text-decoration-line-through ms-2"
+              >300,000₫</span
+            >
           </p>
           <div class="d-flex justify-content-center gap-2 mt-3">
-            <a
-              class="add-button btn btn-outline-dark"
-              data-bs-toggle="modal"
-              data-bs-target="#addGameModel"
-              href="#"
-              >Thêm vào giỏ</a
+            <button
+              class="add-button btn btn-outline-dark btn-add-cart"
+              data-product='{"name":"Kho báu vua hải tặc","image":"Kho báu vua hải tặc.webp","price":235000,"oldPrice":300000,"folder":"images/game-hot","description":"Kho báu vua hải tặc là trò chơi phiêu lưu trên biển, nơi bạn dẫn dắt băng hải tặc của mình đi tìm kho báu huyền thoại."}'
             >
-            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+              Thêm vào giỏ
+            </button>
+            <button
+              class="add-button btn btn-danger btn-buy-now"
+              data-product='{"name":"Kho báu vua hải tặc","image":"Kho báu vua hải tặc.webp","price":235000,"oldPrice":300000,"folder":"images/game-hot","description":"Kho báu vua hải tặc là trò chơi phiêu lưu trên biển, nơi bạn dẫn dắt băng hải tặc của mình đi tìm kho báu huyền thoại."}'
+            >
+              Mua ngay
+            </button>
           </div>
         </div>
       </div>
       <div class="itemsanphammoi text-center">
-        <div class="product-card shadow p-3 mb-4 bg-white rounded-4">
+        <div
+          class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
+        >
           <img
             src="./assets/images/game-hot/Nối từ không.webp"
             class="product-img mb-3 rounded-4"
             alt="Nối từ không"
+            data-product='{"name":"Nối từ không","image":"Nối từ không.webp","price":235000,"oldPrice":300000,"folder":"images/game-hot" ,"description":"Nối từ không là trò chơi ngôn ngữ sáng tạo, nơi người chơi thử thách trí tuệ bằng cách nối các từ theo cách bất ngờ."}'
           />
           <p
             class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
           >
             Nối từ không
           </p>
-          <p class="product-price fw-bold text-gradient-red d-block mt-1">
-            235,000₫
-          </p>
-
-          <div class="d-flex justify-content-center gap-2 mt-3">
-            <a
-              class="add-button btn btn-outline-dark"
-              data-bs-toggle="modal"
-              data-bs-target="#addGameModel"
-              href="#"
-              >Thêm vào giỏ</a
+          <p class="product-price fw-bold d-block mt-1 text-center">
+            <span class="text-gradient-red">235,000₫</span>
+            <span class="text-dark text-decoration-line-through ms-2"
+              >300,000₫</span
             >
-            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+          </p>
+          <div class="d-flex justify-content-center gap-2 mt-3">
+            <button
+              class="add-button btn btn-outline-dark btn-add-cart"
+              data-product='{"name":"Nối từ không","image":"Nối từ không.webp","price":235000,"oldPrice":300000,"folder":"images/game-hot","description":"Nối từ không là trò chơi ngôn ngữ sáng tạo, nơi người chơi thử thách trí tuệ bằng cách nối các từ theo cách bất ngờ."}'
+            >
+              Thêm vào giỏ
+            </button>
+            <button
+              class="add-button btn btn-danger btn-buy-now"
+              data-product='{"name":"Nối từ không","image":"Nối từ không.webp","price":235000,"oldPrice":300000,"folder":"images/game-hot","description":"Nối từ không là trò chơi ngôn ngữ sáng tạo, nơi người chơi thử thách trí tuệ bằng cách nối các từ theo cách bất ngờ."}'
+            >
+              Mua ngay
+            </button>
           </div>
         </div>
       </div>
@@ -250,6 +310,7 @@
                     src="./assets/images/game-thoi-dai/7 Wonders.webp"
                     alt="game"
                     class="img-fluid rounded-1"
+                    data-product='{"name":"Ma sói","image":"7 Wonders.webp","price":180000,"oldPrice":250000,"folder":"images/game-thoi-dai"  ,"description":"Ma sói Ultimate là trò chơi nhập vai xã hội, nơi người chơi đấu trí để tìm ra kẻ sói đội lốt dân làng."}'
                   />
                 </figure>
               </div>
@@ -258,7 +319,6 @@
                   <h1
                     class="section-title header-font pb-lg-5 pt-3 display-6 text-gradient-red"
                   >
-                    <!-- Nguyễn Thị Diệu Linh -->
                     Đang bán chạy
                     <div class="border-top border-3 border-black"></div>
                   </h1>
@@ -271,18 +331,18 @@
                       số lượng người chơi từ 5 - 75 người...
                     </p>
                     <div class="fs-5 fw-bold pb-3 text-gradient-red">
-                      180.000₫
-                      <!-- Zô zá -->
-                    </div>
-                    <!-- font size, font weight -->
-                    <div class="me-3">
-                      <a
-                        class="add-button btn btn-danger mt-auto w-100"
-                        data-bs-toggle="modal"
-                        data-bs-target="#addGameModel"
-                        href="#"
-                        >Mua ngay</a
+                      180,000₫
+                      <span class="text-dark text-decoration-line-through ms-2"
+                        >250,000₫</span
                       >
+                    </div>
+                    <div class="me-3">
+                      <button
+                        class="add-button btn btn-danger btn-buy-now mt-auto w-100"
+                        data-product='{"name":"Ma sói","image":"7 Wonders.webp","price":180000,"oldPrice":250000,"folder":"images/game-thoi-dai","description":"Ma sói Ultimate là trò chơi nhập vai xã hội, nơi người chơi đấu trí để tìm ra kẻ sói đội lốt dân làng."}'
+                      >
+                        Mua ngay
+                      </button>
                       <input type="text" value="4" class="d-none" />
                     </div>
                   </div>
@@ -294,27 +354,21 @@
       </div>
     </div>
     <div id="gamenoibata" class="container-md">
-      <!-- Tiêu đề -->
       <div class="text-center my-5">
         <h1 class="header-font text-gradient-red">Board Game nổi bật</h1>
       </div>
       <div class="container mb-5">
         <div class="row gx-5">
-          <!-- Sản phẩm 1 -->
           <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
             <div
               class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
             >
-              <a
-                href="#noitukhong"
-                style="text-decoration: none; color: inherit"
-                ;
-              >
                 <img
                   src="./assets/images/game-hot/Nối từ không.webp"
                   class="product-img mb-3 rounded-4"
                   style="object-fit: cover; width: 100%; height: 220px"
                   alt="Nối từ không"
+                  data-product='{"name":"Nối từ không","image":"Nối từ không.webp","price":235000,"oldPrice":299000,"folder":"images/game-hot" ,"description":"Nối từ không là trò chơi ngôn ngữ sáng tạo, nơi người chơi thử thách trí tuệ bằng cách nối các từ theo cách bất ngờ."}'
                 />
                 <p
                   class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
@@ -329,18 +383,21 @@
                 </p>
               </a>
               <div class="d-flex justify-content-center gap-2 mt-3">
-                <a
-                  class="add-button btn btn-outline-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#addGameModel"
-                  href="#"
-                  >Thêm vào giỏ</a
+                <button
+                  class="add-button btn btn-outline-dark btn-add-cart"
+                  data-product='{"name":"Nối từ không","image":"Nối từ không.webp","price":235000,"oldPrice":299000,"folder":"images/game-hot","description":"Nối từ không là trò chơi ngôn ngữ sáng tạo, nơi người chơi thử thách trí tuệ bằng cách nối các từ theo cách bất ngờ."}'
                 >
-                <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                  Thêm vào giỏ
+                </button>
+                <button
+                  class="add-button btn btn-danger btn-buy-now"
+                  data-product='{"name":"Nối từ không","image":"Nối từ không.webp","price":235000,"oldPrice":299000,"folder":"images/game-hot","description":"Nối từ không là trò chơi ngôn ngữ sáng tạo, nơi người chơi thử thách trí tuệ bằng cách nối các từ theo cách bất ngờ."}'
+                >
+                  Mua ngay
+                </button>
               </div>
             </div>
           </div>
-          <!-- Sản phẩm 2 -->
           <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
             <div
               class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
@@ -350,6 +407,7 @@
                 class="product-img mb-3 rounded-4"
                 style="object-fit: cover; width: 100%; height: 220px"
                 alt="Míeooo"
+                data-product='{"name":"Míeooo","image":"Míeooo.webp","price":250000,"oldPrice":319000,"folder":"images/game-hot","description":"Míeooo là trò chơi thẻ bài vui nhộn với chủ đề mèo, nơi người chơi cạnh tranh để thu thập những chú mèo đáng yêu."}'
               />
               <p
                 class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
@@ -363,18 +421,21 @@
                 >
               </p>
               <div class="d-flex justify-content-center gap-2 mt-3">
-                <a
-                  class="add-button btn btn-outline-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#addGameModel"
-                  href="#"
-                  >Thêm vào giỏ</a
+                <button
+                  class="add-button btn btn-outline-dark btn-add-cart"
+                  data-product='{"name":"Míeooo","image":"Míeooo.webp","price":250000,"oldPrice":319000,"folder":"images/game-hot","description":"Míeooo là trò chơi thẻ bài vui nhộn với chủ đề mèo, nơi người chơi cạnh tranh để thu thập những chú mèo đáng yêu."}'
                 >
-                <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                  Thêm vào giỏ
+                </button>
+                <button
+                  class="add-button btn btn-danger btn-buy-now"
+                  data-product='{"name":"Míeooo","image":"Míeooo.webp","price":250000,"oldPrice":319000,"folder":"images/game-hot","description":"Míeooo là trò chơi thẻ bài vui nhộn với chủ đề mèo, nơi người chơi cạnh tranh để thu thập những chú mèo đáng yêu."}'
+                >
+                  Mua ngay
+                </button>
               </div>
             </div>
           </div>
-          <!-- Sản phẩm 3 -->
           <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
             <div
               class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
@@ -384,6 +445,7 @@
                 class="product-img mb-3 rounded-4"
                 style="object-fit: cover; width: 100%; height: 220px"
                 alt="Ting Ting Doraemon"
+                data-product='{"name":"Ting Ting Doraemon","image":"Ting Ting Doraemon.webp","price":299000,"oldPrice":369000,"folder":"images/game-hot" ,"description":"Ting Ting Doraemon là trò chơi vui nhộn với chủ đề Doraemon, nơi người chơi tham gia vào các cuộc phiêu lưu thú vị cùng chú mèo máy."}'
               />
               <p
                 class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
@@ -397,18 +459,21 @@
                 >
               </p>
               <div class="d-flex justify-content-center gap-2 mt-3">
-                <a
-                  class="add-button btn btn-outline-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#addGameModel"
-                  href="#"
-                  >Thêm vào giỏ</a
+                <button
+                  class="add-button btn btn-outline-dark btn-add-cart"
+                  data-product='{"name":"Ting Ting Doraemon","image":"Ting Ting Doraemon.webp","price":299000,"oldPrice":369000,"folder":"images/game-hot","description":"Ting Ting Doraemon là trò chơi vui nhộn với chủ đề Doraemon, nơi người chơi tham gia vào các cuộc phiêu lưu thú vị cùng chú mèo máy."}'
                 >
-                <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                  Thêm vào giỏ
+                </button>
+                <button
+                  class="add-button btn btn-danger btn-buy-now"
+                  data-product='{"name":"Ting Ting Doraemon","image":"Ting Ting Doraemon.webp","price":299000,"oldPrice":369000,"folder":"images/game-hot","description":"Ting Ting Doraemon là trò chơi vui nhộn với chủ đề Doraemon, nơi người chơi tham gia vào các cuộc phiêu lưu thú vị cùng chú mèo máy."}'
+                >
+                  Mua ngay
+                </button>
               </div>
             </div>
           </div>
-          <!-- Sản phẩm 4 -->
           <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
             <div
               class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
@@ -418,6 +483,7 @@
                 class="product-img mb-3 rounded-4"
                 style="object-fit: cover; width: 100%; height: 220px"
                 alt="Thần Tích"
+                data-product='{"name":"Thần Tích","image":"Thần Tích.webp","price":259000,"oldPrice":300000,"folder":"images/game-hot" ,"description":"Thần Tích là trò chơi chiến thuật lấy bối cảnh thần thoại, nơi người chơi xây dựng đế chế và tranh giành quyền lực."}'
               />
               <p
                 class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
@@ -431,18 +497,21 @@
                 >
               </p>
               <div class="d-flex justify-content-center gap-2 mt-3">
-                <a
-                  class="add-button btn btn-outline-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#addGameModel"
-                  href="#"
-                  >Thêm vào giỏ</a
+                <button
+                  class="add-button btn btn-outline-dark btn-add-cart"
+                  data-product='{"name":"Thần Tích","image":"Thần Tích.webp","price":259000,"oldPrice":300000,"folder":"images/game-hot","description":"Thần Tích là trò chơi chiến thuật lấy bối cảnh thần thoại, nơi người chơi xây dựng đế chế và tranh giành quyền lực."}'
                 >
-                <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                  Thêm vào giỏ
+                </button>
+                <button
+                  class="add-button btn btn-danger btn-buy-now"
+                  data-product='{"name":"Thần Tích","image":"Thần Tích.webp","price":259000,"oldPrice":300000,"folder":"images/game-hot","description":"Thần Tích là trò chơi chiến thuật lấy bối cảnh thần thoại, nơi người chơi xây dựng đế chế và tranh giành quyền lực."}'
+                >
+                  Mua ngay
+                </button>
               </div>
             </div>
           </div>
-          <!-- Sản phẩm 5 -->
           <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
             <div
               class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
@@ -452,6 +521,7 @@
                 class="product-img mb-3 rounded-4"
                 style="object-fit: cover; width: 100%; height: 220px"
                 alt="Conan"
+                data-product='{"name":"Conan","image":"Conan.webp","price":319000,"oldPrice":379000,"folder":"images/game-hot" ,"description":"Conan là trò chơi phiêu lưu hành động, nơi người chơi nhập vai chiến binh huyền thoại để đối đầu với kẻ thù."}'
               />
               <p
                 class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
@@ -465,18 +535,21 @@
                 >
               </p>
               <div class="d-flex justify-content-center gap-2 mt-3">
-                <a
-                  class="add-button btn btn-outline-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#addGameModel"
-                  href="#"
-                  >Thêm vào giỏ</a
+                <button
+                  class="add-button btn btn-outline-dark btn-add-cart"
+                  data-product='{"name":"Conan","image":"Conan.webp","price":319000,"oldPrice":379000,"folder":"images/game-hot","description":"Conan là trò chơi phiêu lưu hành động, nơi người chơi nhập vai chiến binh huyền thoại để đối đầu với kẻ thù."}'
                 >
-                <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                  Thêm vào giỏ
+                </button>
+                <button
+                  class="add-button btn btn-danger btn-buy-now"
+                  data-product='{"name":"Conan","image":"Conan.webp","price":319000,"oldPrice":379000,"folder":"images/game-hot","description":"Conan là trò chơi phiêu lưu hành động, nơi người chơi nhập vai chiến binh huyền thoại để đối đầu với kẻ thù."}'
+                >
+                  Mua ngay
+                </button>
               </div>
             </div>
           </div>
-          <!-- Sản phẩm 6 -->
           <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
             <div
               class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
@@ -486,6 +559,7 @@
                 class="product-img mb-3 rounded-4"
                 style="object-fit: cover; width: 100%; height: 220px"
                 alt="Uno"
+                data-product='{"name":"Uno","image":"Uno.webp","price":349000,"oldPrice":399000,"folder":"images/Party game  Giờ ra chơi" ,"description":"Uno là trò chơi thẻ bài kinh điển, nơi người chơi cạnh tranh để hết bài đầu tiên thông qua chiến thuật và may m}'
               />
               <p
                 class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
@@ -499,18 +573,21 @@
                 >
               </p>
               <div class="d-flex justify-content-center gap-2 mt-3">
-                <a
-                  class="add-button btn btn-outline-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#addGameModel"
-                  href="#"
-                  >Thêm vào giỏ</a
+                <button
+                  class="add-button btn btn-outline-dark btn-add-cart"
+                  data-product='{"name":"Uno","image":"Uno.webp","price":349000,"oldPrice":399000,"folder":"images/Party game  Giờ ra chơi","description":"Uno là trò chơi thẻ bài kinh điển, nơi người chơi cạnh tranh để hết bài đầu tiên thông qua chiến thuật và may mắn."}'
                 >
-                <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                  Thêm vào giỏ
+                </button>
+                <button
+                  class="add-button btn btn-danger btn-buy-now"
+                  data-product='{"name":"Uno","image":"Uno.webp","price":349000,"oldPrice":399000,"folder":"images/Party game  Giờ ra chơi","description":"Uno là trò chơi thẻ bài kinh điển, nơi người chơi cạnh tranh để hết bài đầu tiên thông qua chiến thuật và may mắn."}'
+                >
+                  Mua ngay
+                </button>
               </div>
             </div>
           </div>
-          <!-- Sản phẩm 7 -->
           <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
             <div
               class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
@@ -520,6 +597,7 @@
                 class="product-img mb-3 rounded-4"
                 style="object-fit: cover; width: 100%; height: 220px"
                 alt="Lầy Bad luck"
+                data-product='{"name":"Lầy Bad luck","image":"Lầy Bad luck.webp","price":259000,"oldPrice":299000,"folder":"images/Party game  Giờ ra chơi" ,"description":"Lầy Bad luck là trò chơi tiệc tùng vui nhộn, nơi người chơi đối mặt với những thử thách hài hước và bất ngờ."}'
               />
               <p
                 class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
@@ -533,18 +611,21 @@
                 >
               </p>
               <div class="d-flex justify-content-center gap-2 mt-3">
-                <a
-                  class="add-button btn btn-outline-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#addGameModel"
-                  href="#"
-                  >Thêm vào giỏ</a
+                <button
+                  class="add-button btn btn-outline-dark btn-add-cart"
+                  data-product='{"name":"Lầy Bad luck","image":"Lầy Bad luck.webp","price":259000,"oldPrice":299000,"folder":"images/Party game  Giờ ra chơi","description":"Lầy Bad luck là trò chơi tiệc tùng vui nhộn, nơi người chơi đối mặt với những thử thách hài hước và bất ngờ."}'
                 >
-                <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                  Thêm vào giỏ
+                </button>
+                <button
+                  class="add-button btn btn-danger btn-buy-now"
+                  data-product='{"name":"Lầy Bad luck","image":"Lầy Bad luck.webp","price":259000,"oldPrice":299000,"folder":"images/Party game  Giờ ra chơi","description":"Lầy Bad luck là trò chơi tiệc tùng vui nhộn, nơi người chơi đối mặt với những thử thách hài hước và bất ngờ."}'
+                >
+                  Mua ngay
+                </button>
               </div>
             </div>
           </div>
-          <!-- Sản phẩm 8 -->
           <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
             <div
               class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
@@ -554,6 +635,7 @@
                 class="product-img mb-3 rounded-4"
                 style="object-fit: cover; width: 100%; height: 220px"
                 alt="Vua cà phê"
+                data-product='{"name":"Vua cà phê","image":"Vua cà phê.webp","price":299000,"oldPrice":359000,"folder":"images/Party game  Giờ ra chơi" ,"description":"Vua cà phê là trò chơi chiến thuật, nơi người chơi cạnh tranh để trở thành ông trùm kinh doanh cà phê."}'
               />
               <p
                 class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
@@ -567,14 +649,18 @@
                 >
               </p>
               <div class="d-flex justify-content-center gap-2 mt-3">
-                <a
-                  class="add-button btn btn-outline-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#addGameModel"
-                  href="#"
-                  >Thêm vào giỏ</a
+                <button
+                  class="add-button btn btn-outline-dark btn-add-cart"
+                  data-product='{"name":"Vua cà phê","image":"Vua cà phê.webp","price":299000,"oldPrice":359000,"folder":"images/Party game  Giờ ra chơi","description":"Vua cà phê là trò chơi chiến thuật, nơi người chơi cạnh tranh để trở thành ông trùm kinh doanh cà phê."}'
                 >
-                <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+                  Thêm vào giỏ
+                </button>
+                <button
+                  class="add-button btn btn-danger btn-buy-now"
+                  data-product='{"name":"Vua cà phê","image":"Vua cà phê.webp","price":299000,"oldPrice":359000,"folder":"images/Party game  Giờ ra chơi","description":"Vua cà phê là trò chơi chiến thuật, nơi người chơi cạnh tranh để trở thành ông trùm kinh doanh cà phê."}'
+                >
+                  Mua ngay
+                </button>
               </div>
             </div>
           </div>

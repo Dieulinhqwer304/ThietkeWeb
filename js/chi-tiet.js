@@ -52,7 +52,7 @@ export function renderDetail() {
 
   if (addCart) {
     addCart.onclick = () => {
-      console.log(quantity)
+      console.log(quantity);
       addToCart(product, 0, quantity);
     };
   }
@@ -61,4 +61,26 @@ export function renderDetail() {
       addToCart(product, 1, 1);
     };
   }
+  document.querySelectorAll(".product-img").forEach((img) => {
+    img.onclick = function () {
+      const product = JSON.parse(this.getAttribute("data-product"));
+      localStorage.setItem("chi-tiet", JSON.stringify(product));
+      window.location.href = "#chi-tiet";
+      location.reload();
+    };
+  });
+
+  document.querySelectorAll(".btn-add-cart").forEach((btn) => {
+    btn.onclick = function () {
+      const product = JSON.parse(this.getAttribute("data-product"));
+      addToCart(product, 0, 1);
+    };
+  });
+
+  document.querySelectorAll(".btn-buy-now").forEach((btn) => {
+    btn.onclick = function () {
+      const product = JSON.parse(this.getAttribute("data-product"));
+      addToCart(product, 1, 1);
+    };
+  });
 }

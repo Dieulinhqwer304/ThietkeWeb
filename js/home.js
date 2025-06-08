@@ -1,3 +1,5 @@
+import { addToCart } from "../js/boardgame.js";
+
 export function loadHome() {
   setTimeout(() => {
     if (
@@ -15,5 +17,28 @@ export function loadHome() {
         },
       });
     }
+
+    // Gán sự kiện sau khi carousel đã render
+    document.querySelectorAll(".product-img").forEach((img) => {
+      img.onclick = function () {
+        const product = JSON.parse(this.getAttribute("data-product"));
+        localStorage.setItem("chi-tiet", JSON.stringify(product));
+        window.location.href = "#chi-tiet";
+      };
+    });
+
+    document.querySelectorAll(".btn-add-cart").forEach((btn) => {
+      btn.onclick = function () {
+        const product = JSON.parse(this.getAttribute("data-product"));
+        addToCart(product, 0, 1);
+      };
+    });
+
+    document.querySelectorAll(".btn-buy-now").forEach((btn) => {
+      btn.onclick = function () {
+        const product = JSON.parse(this.getAttribute("data-product"));
+        addToCart(product, 1, 1);
+      };
+    });
   }, 0);
 }
