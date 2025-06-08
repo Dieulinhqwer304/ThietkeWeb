@@ -2,6 +2,7 @@
 #chitietsanpham {
   margin-top: 20px;
   padding: 50px 0;
+  zoom: 0.8 !important;
 }
 
 .product-card {
