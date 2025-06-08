@@ -21,24 +21,34 @@ export function renderCart() {
     const total = price * item.quantity;
     subtotal += total;
     const productHTML = `
-      <div class="list-group-item cart-item d-flex justify-content-between align-items-center p-3 mb-3">
-        <div class="d-flex align-items-center gap-3">
+  <div class="list-group-item cart-item p-3 mb-3 border rounded shadow-sm">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <div class="d-flex align-items-center gap-3 flex-wrap">
+        <a href="#chi-tiet"
+           class="d-flex align-items-center gap-3 text-decoration-none text-dark product-link"
+           data-item='${JSON.stringify(item)}'>
           <img src="assets/${item.folder}/${item.image}" alt="${item.name}"
-            class="img-fluid rounded" style="width: 80px; height: 80px; object-fit: cover;">
+            class="rounded" style="width: 80px; height: 80px; object-fit: cover;">
           <div>
-            <h6 class="mb-1">${item.name}</h6>
-            <p class="mb-0">Giá: <strong>${total.toLocaleString()}₫</strong></p>
+            <h6 class="mb-1 fw-semibold" style="font-size: 18px;">${
+              item.name
+            }</h6>
+            <p class="mb-0 text-muted">Giá: <strong class="text-danger">${total.toLocaleString()}₫</strong></p>
           </div>
-        </div>
-        <div class="d-flex align-items-center gap-3">
-          <input type="number" class="form-control form-control-sm w-50px quantity-input"
-            data-index="${index}" value="${item.quantity}" min="1" />
-          <button class="btn btn-sm btn-outline-danger btn-remove" data-index="${index}">
-            <i class="bi bi-trash"></i>
-          </button>
-        </div>
+        </a>
       </div>
-    `;
+      <div class="d-flex align-items-center gap-2 mt-2 mt-md-0">
+        <input type="number" class="form-control form-control-sm quantity-input text-center"
+          style="width: 70px;" data-index="${index}" value="${
+      item.quantity
+    }" min="1" />
+        <button class="btn btn-sm btn-outline-danger btn-remove" data-index="${index}" title="Xóa sản phẩm">
+          <i class="bi bi-trash"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+`;
     cartList.insertAdjacentHTML("beforeend", productHTML);
   });
 
@@ -86,16 +96,32 @@ export function renderCart() {
     });
   });
 
+  document.querySelectorAll(".product-link").forEach((link) => {
+    link.addEventListener("click", function (e) {
+      const itemData = this.getAttribute("data-item");
+      localStorage.setItem("chi-tiet", itemData);
+    });
+  });
+
   const checkoutBtn = document.getElementById("checkout-btn");
   const isLogin = localStorage.getItem("isLogin") === "true";
   if (checkoutBtn) {
     checkoutBtn.addEventListener("click", () => {
       if (!isLogin) {
-        showToast(
-          "Có lỗi xảy ra",
-          "Vui lòng đăng nhập để thanh toán!",
-          "danger"
-        );
+        Swal.fire({
+          icon: "error",
+          title: "Thanh toán thất bại",
+          text: "Vui lòng đăng nhập để thanh toán!",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Đăng nhập",
+          cancelButtonText: "Hủy",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = "pages/login.html";
+          }
+        });
       } else {
         const paymentUrl = createVnpayUrl(total);
         window.location.href = paymentUrl;

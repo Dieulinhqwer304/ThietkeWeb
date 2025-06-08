@@ -1,8 +1,9 @@
-body {
-  background: #f3f2ec;
-  /* overflow-x: hidden; */
-}
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
 
+body {
+  font-family: "Outfit", sans-serif !important;
+  background: #f3f2ec;
+}
 .header-font {
   font-family: "Prata", Georgia, serif;
 }
@@ -123,6 +124,7 @@ form a:hover {
 .dropdown-content a.active {
   color: #0d6efd !important;
   font-weight: bold;
+  /* text-decoration: underline; */
 }
 
 .hover-underline-center {
@@ -194,6 +196,7 @@ form a:hover {
   outline: none;
   box-shadow: none;
 }
+
 /* --------------- */
 /*gioithieu*/
 body {
@@ -232,7 +235,6 @@ body {
   top: 50%;
   left: 0;
   right: 0;
-  border-top: 1px solid #eee;
   z-index: 0;
 }
 

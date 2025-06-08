@@ -108,25 +108,7 @@ export async function loadImage() {
             </p>`
         }
       </div>`;
-    function addToCart(product, action) {
-      const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-      const existingItem = cart.find((item) => item.name === product.name);
-      if (existingItem) {
-        existingItem.quantity += 1;
-      } else {
-        cart.push({ ...product, quantity: 1 });
-      }
-
-      localStorage.setItem("cart", JSON.stringify(cart));
-      loadCartCount();
-      if (action === 0) {
-        showToast("Thành công", "Thêm vào giỏ hàng thành công!", "success");
-      }
-      if (action === 1) {
-        window.location.href = "#cart";
-      }
-    }
     container.innerHTML = html;
     document
       .querySelectorAll(".add-button.btn-outline-dark")
@@ -151,7 +133,7 @@ export async function loadImage() {
     document.querySelectorAll(".product-img").forEach((img, index) => {
       img.addEventListener("click", () => {
         const product = filteredItems[(currentPage - 1) * itemsPerPage + index];
-        localStorage.setItem("chi-tiet",JSON.stringify(product))
+        localStorage.setItem("chi-tiet", JSON.stringify(product));
         window.location.href = `#chi-tiet`;
       });
     });
@@ -203,5 +185,31 @@ export async function loadImage() {
       console.error("Lỗi khi tải dữ liệu ảnh:", err);
       container.innerHTML = `<p class="text-danger text-center mt-5">Không tìm thấy dữ liệu sản phẩm.</p>`;
     }
+  }
+}
+
+export function addToCart(product, action = false, quantity = 1) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const existingItem = cart.find((item) => item.name === product.name);
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({ ...product, quantity: quantity });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  loadCartCount();
+  if (action === 0) {
+    Swal.fire({
+      icon: "success",
+      title: "Thành công",
+      text: "Thêm vào giỏ hàng thành công!",
+      timer:1000,
+      showConfirmButton: false,
+    });
+  }
+  if (action === 1) {
+    window.location.href = "#cart";
   }
 }

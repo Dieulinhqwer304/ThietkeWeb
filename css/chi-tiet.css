@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
+
+/* Tổng thể */
+#chitietsanpham {
+  margin-top: 20px;
+  padding: 50px 0;
+}
+
+/* Card */
+.product-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 16px; /* giảm từ 24px xuống */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Hình ảnh */
+.product-image-wrapper {
+  max-height: 10%; /* Giới hạn chiều cao tối đa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 8px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.product-image {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Đảm bảo không bị cắt */
+}
+
+.product-image-wrapper:hover .product-image {
+  transform: scale(1.05);
+}
+
+/* Thông tin */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.product-price {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ff4d6d;
+}
+
+.product-description {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* Số lượng */
+.quantity-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantity-controls button {
+  padding: 10px 14px;
+  background: #f0f0f0;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.quantity-controls button:hover {
+  background: #e0e0e0;
+}
+
+.quantity-controls span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  min-width: 36px;
+  text-align: center;
+}
+
+/* Nút hành động */
+.action-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+#addCart,
+#payment {
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Thêm vào giỏ */
+#addCart {
+  background: #222;
+  color: #fff;
+  border: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#addCart:hover {
+  background: #000;
+  transform: scale(1.05);
+}
+
+/* Mua ngay */
+#payment {
+  background: transparent;
+  border: 2px solid #222;
+  color: #222;
+  text-decoration: none;
+}
+
+#payment:hover {
+  background: #222;
+  color: #fff;
+  transform: scale(1.05);
+}

@@ -1,235 +1,195 @@
-<main>
-  <div id="chitietsanpham" class="py-3">
-    <div class="container-md py-5 px-4">
-      <div class="row justify-content-center">
-        <div class="col-xxl-10">
-          <div class="row">
-            <div class="col-lg-5">
-              <figure class="rounded-1 d-flex justify-content-center">
-                <img
-                  src="assets\images\game-hot\Nối từ không.webp"
-                  alt="Nối từ không"
-                  class="img-fluid"
-                />
-              </figure>
-            </div>
-            <div class="col-lg-7">
-              <div>
-                <h1>NỐI TỪ KHÔNG</h1>
+<link rel="stylesheet" href="../css/chi-tiet.css  " />
 
-                <div class="fs-5 fw-bold">200.000₫</div>
-                <p class="py-3 text-secondary" style="text-align: justify">
-                  "Nối Từ Không" là một boardgame giải trí thú vị giúp rèn luyện
-                  phản xạ ngôn ngữ, tư duy logic và khả năng sáng tạo từ ngữ.
-                  Người chơi sẽ lần lượt nối các từ với nhau sao cho hợp lý –
-                  nhưng không được dùng một số từ cấm! Điều đó tạo nên nhiều
-                  tình huống "cười ra nước mắt" và những màn đối đáp siêu lầy
-                  lội.
-                </p>
-                <div>
-                  <div class="btn-group" role="group">
-                    <button
-                      id="minusButton"
-                      type="button"
-                      class="btn btn-outline-dark"
-                    >
-                      <i class="bi bi-dash"></i>
-                    </button>
-                    <button
-                      id="quantity"
-                      type="button"
-                      class="btn btn-outline-dark"
-                    >
-                      1
-                    </button>
-                    <button
-                      id="plusButton"
-                      type="button"
-                      class="btn btn-outline-dark"
-                    >
-                      <i class="bi bi-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="d-flex mt-3">
-                  <button
-                    id="detailedButton"
-                    class="btn btn-dark me-3"
-                    data-bs-toggle="modal"
-                    data-bs-target="#addBookModal"
-                    type="submit"
-                  >
-                    <i class="bi-cart-fill me-1"></i>
-                    Thêm vào giỏ
-                  </button>
-                  <div class="text-start">
-                    <a
-                      href="pages/cart.html"
-                      class="add-button btn btn-dark mt-auto w-100"
-                      >Mua ngay</a
-                    >
-                  </div>
-                </div>
-              </div>
+<div id="chitietsanpham">
+  <div class="container-md">
+    <div class="product-card row align-items-center g-5">
+      <!-- Ảnh -->
+      <div class="col-lg-6">
+        <div class="product-image-wrapper">
+          <img
+            src="assets/images/game-hot/Nối từ không.webp"
+            alt="Nối từ không"
+            class="product-image"
+          />
+        </div>
+      </div>
+
+      <!-- Thông tin -->
+      <div class="col-lg-6">
+        <div class="product-info">
+          <h1 class="product-title">Nối Từ Không</h1>
+          <div class="product-price">89.000₫</div>
+          <p class="product-description">
+            Trò chơi thông minh giúp rèn luyện tư duy ngôn ngữ, phù hợp với mọi
+            lứa tuổi. Nâng cao kỹ năng phản xạ và sáng tạo chỉ trong 15 phút mỗi
+            ngày!
+          </p>
+
+          <div class="quantity-group">
+            <label>Số lượng</label>
+            <div class="quantity-controls">
+              <button id="minusButton"><i class="bi bi-dash"></i></button>
+              <span id="quantity">1</span>
+              <button id="plusButton"><i class="bi bi-plus"></i></button>
             </div>
+          </div>
+
+          <div class="action-buttons">
+            <button id="addCart">
+              <i class="bi bi-cart-fill"></i> Thêm vào giỏ
+            </button>
+            <a id="payment">Mua ngay</a>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Sản phẩm liên quan -->
-  <div class="pb-5">
-    <div class="container-md">
-      <!-- Tiêu đề -->
-      <div class="text-start py-5 ps-4 border-top border-black">
-        <h2 class="header-font">Sản phẩm cùng loại:</h2>
+<div class="pb-5">
+  <div class="container-md">
+    <div class="text-start py-5 ps-4 border-top border-black">
+      <h2 class="header-font">Sản phẩm cùng loại:</h2>
+    </div>
+
+    <div
+      class="row gx-5 row-cols-xxl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1 mx-4"
+    >
+      <div class="col mb-5">
+        <div
+          class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
+        >
+          <img
+            src="assets\images\game-hot\Bang.webp"
+            class="product-img mb-3 rounded-4"
+            style="object-fit: cover; width: 100%; height: 220px"
+            alt="Bang"
+          />
+          <p
+            class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
+          >
+            Bang
+          </p>
+          <p class="product-price fw-bold d-block mt-1 text-center">
+            <span class="text-gradient-red">299,000₫</span>
+            <span class="text-dark text-decoration-line-through ms-2"
+              >379,000₫</span
+            >
+          </p>
+          <div class="d-flex justify-content-center gap-2 mt-3">
+            <a
+              class="add-button btn btn-outline-dark"
+              data-bs-toggle="modal"
+              data-bs-target="#addGameModel"
+              href="#"
+              >Thêm vào giỏ</a
+            >
+            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
+          </div>
+        </div>
       </div>
 
-      <!-- Danh sách liên quan -->
-      <div
-        class="row gx-5 row-cols-xxl-4 row-cols-lg-3 row-cols-sm-2 row-cols-1 mx-4"
-      >
-        <!-- Sản phẩm 1 -->
-        <div class="col mb-5">
-          <div
-            class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
+      <div class="col mb-5">
+        <div
+          class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
+        >
+          <img
+            src="assets\images\game-hot\Conan.webp"
+            class="product-img mb-3 rounded-4"
+            style="object-fit: cover; width: 100%; height: 220px"
+            alt="Conan"
+          />
+          <p
+            class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
           >
-            <img
-              src="assets\images\game-hot\Bang.webp"
-              class="product-img mb-3 rounded-4"
-              style="object-fit: cover; width: 100%; height: 220px"
-              alt="Bang"
-            />
-            <p
-              class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
+            Conan
+          </p>
+          <p class="product-price fw-bold d-block mt-1 text-center">
+            <span class="text-gradient-red">299,000₫</span>
+            <span class="text-dark text-decoration-line-through ms-2"
+              >359,000₫</span
             >
-              Bang
-            </p>
-            <p class="product-price fw-bold d-block mt-1 text-center">
-              <span class="text-gradient-red">299,000₫</span>
-              <span class="text-dark text-decoration-line-through ms-2"
-                >379,000₫</span
-              >
-            </p>
-            <div class="d-flex justify-content-center gap-2 mt-3">
-              <a
-                class="add-button btn btn-outline-dark"
-                data-bs-toggle="modal"
-                data-bs-target="#addGameModel"
-                href="#"
-                >Thêm vào giỏ</a
-              >
-              <a href="#" class="add-button btn btn-danger">Mua ngay</a>
-            </div>
+          </p>
+          <div class="d-flex justify-content-center gap-2 mt-3">
+            <a
+              class="add-button btn btn-outline-dark"
+              data-bs-toggle="modal"
+              data-bs-target="#addGameModel"
+              href="#"
+              >Thêm vào giỏ</a
+            >
+            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
           </div>
         </div>
+      </div>
 
-        <!-- Sản phẩm 2 -->
-        <div class="col mb-5">
-          <div
-            class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
+      <div class="col mb-5">
+        <div
+          class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
+        >
+          <img
+            src="assets\images\game-hot\Bom Lắc.webp"
+            class="product-img mb-3 rounded-4"
+            style="object-fit: cover; width: 100%; height: 220px"
+            alt="Bom Lắc"
+          />
+          <p
+            class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
           >
-            <img
-              src="assets\images\game-hot\Conan.webp"
-              class="product-img mb-3 rounded-4"
-              style="object-fit: cover; width: 100%; height: 220px"
-              alt="Conan"
-            />
-            <p
-              class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
+            Bom Lắc
+          </p>
+          <p class="product-price fw-bold d-block mt-1 text-center">
+            <span class="text-gradient-red">299,000₫</span>
+            <span class="text-dark text-decoration-line-through ms-2"
+              >359,000₫</span
             >
-              Conan
-            </p>
-            <p class="product-price fw-bold d-block mt-1 text-center">
-              <span class="text-gradient-red">299,000₫</span>
-              <span class="text-dark text-decoration-line-through ms-2"
-                >359,000₫</span
-              >
-            </p>
-            <div class="d-flex justify-content-center gap-2 mt-3">
-              <a
-                class="add-button btn btn-outline-dark"
-                data-bs-toggle="modal"
-                data-bs-target="#addGameModel"
-                href="#"
-                >Thêm vào giỏ</a
-              >
-              <a href="#" class="add-button btn btn-danger">Mua ngay</a>
-            </div>
+          </p>
+          <div class="d-flex justify-content-center gap-2 mt-3">
+            <a
+              class="add-button btn btn-outline-dark"
+              data-bs-toggle="modal"
+              data-bs-target="#addGameModel"
+              href="#"
+              >Thêm vào giỏ</a
+            >
+            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
           </div>
         </div>
+      </div>
 
-        <!-- Sản phẩm 3 -->
-        <div class="col mb-5">
-          <div
-            class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
+      <div class="col mb-5">
+        <div
+          class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
+        >
+          <img
+            src="assets\images\game-hot\Avalon.jpg"
+            class="product-img mb-3 rounded-4"
+            style="object-fit: cover; width: 100%; height: 220px"
+            alt="Avalon"
+          />
+          <p
+            class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
           >
-            <img
-              src="assets\images\game-hot\Bom Lắc.webp"
-              class="product-img mb-3 rounded-4"
-              style="object-fit: cover; width: 100%; height: 220px"
-              alt="Bom Lắc"
-            />
-            <p
-              class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
+            Avalon
+          </p>
+          <p class="product-price fw-bold d-block mt-1 text-center">
+            <span class="text-gradient-red">299,000₫</span>
+            <span class="text-dark text-decoration-line-through ms-2"
+              >359,000₫</span
             >
-              Bom Lắc
-            </p>
-            <p class="product-price fw-bold d-block mt-1 text-center">
-              <span class="text-gradient-red">299,000₫</span>
-              <span class="text-dark text-decoration-line-through ms-2"
-                >359,000₫</span
-              >
-            </p>
-            <div class="d-flex justify-content-center gap-2 mt-3">
-              <a
-                class="add-button btn btn-outline-dark"
-                data-bs-toggle="modal"
-                data-bs-target="#addGameModel"
-                href="#"
-                >Thêm vào giỏ</a
-              >
-              <a href="#" class="add-button btn btn-danger">Mua ngay</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Sản phẩm 4 -->
-        <div class="col mb-5">
-          <div
-            class="product-card shadow p-3 bg-white rounded-4 overflow-hidden h-100"
-          >
-            <img
-              src="assets\images\game-hot\Avalon.jpg"
-              class="product-img mb-3 rounded-4"
-              style="object-fit: cover; width: 100%; height: 220px"
-              alt="Avalon"
-            />
-            <p
-              class="product-name fw-bold text-gradient-red d-block mb-1 text-center"
+          </p>
+          <div class="d-flex justify-content-center gap-2 mt-3">
+            <a
+              class="add-button btn btn-outline-dark"
+              data-bs-toggle="modal"
+              data-bs-target="#addGameModel"
+              href="#"
+              >Thêm vào giỏ</a
             >
-              Avalon
-            </p>
-            <p class="product-price fw-bold d-block mt-1 text-center">
-              <span class="text-gradient-red">299,000₫</span>
-              <span class="text-dark text-decoration-line-through ms-2"
-                >359,000₫</span
-              >
-            </p>
-            <div class="d-flex justify-content-center gap-2 mt-3">
-              <a
-                class="add-button btn btn-outline-dark"
-                data-bs-toggle="modal"
-                data-bs-target="#addGameModel"
-                href="#"
-                >Thêm vào giỏ</a
-              >
-              <a href="#" class="add-button btn btn-danger">Mua ngay</a>
-            </div>
+            <a href="#" class="add-button btn btn-danger">Mua ngay</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-</main>
+</div>

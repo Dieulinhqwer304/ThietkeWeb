@@ -1,48 +1,23 @@
 import { routes } from "./router.js";
-import { loadImage } from "./image.js";
-import { renderCart, loadCartCount } from "./cart.js";
-import { renderDetail } from "./detail.js";
-async function loadComponent(selector, url) {
-  try {
-    const res = await fetch(url);
-    const html = await res.text();
-    document.querySelector(selector).innerHTML = html;
-    loadImage();
+import { loadCartCount } from "./cart.js";
 
-    if (url.includes("home.html") && typeof $ !== "undefined") {
-      setTimeout(() => {
-        if (
-          $("#dssanphammois").length &&
-          !$("#dssanphammois").hasClass("owl-loaded")
-        ) {
-          $("#dssanphammois").owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            responsive: {
-              0: { items: 1 },
-              600: { items: 2 },
-              1000: { items: 3 },
-            },
-          });
-        }
-      }, 0);
-    }
-
-    if (url.includes("cart.html") && typeof $ !== "undefined") {
-      renderCart();
-    }
-    if (url.includes("chi-tiet.html")) {
-      const product = JSON.parse(localStorage.getItem("chi-tiet"));
-      console.log(product)
-      renderDetail(product)
-    }
-    loadCartCount();
-    checkLogin();
-  } catch {
-    document.querySelector(selector).innerHTML =
-      "<p>Không thể tải nội dung.</p>";
-  }
+function loadHTML(id, file, route = null) {
+  fetch(file)
+    .then((response) => {
+      if (!response.ok) throw new Error("Không tìm thấy file: " + file);
+      return response.text();
+    })
+    .then((data) => {
+      document.getElementById(id).innerHTML = data;
+      if (route && typeof route.function === "function") {
+        route.function();
+      }
+      loadCartCount();
+      checkLogin();
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 }
 
 async function loadPage() {
@@ -50,26 +25,31 @@ async function loadPage() {
   if (path.includes("sauthanhtoan")) {
     const url = new URL(window.location.href.replace("#", ""));
     const responseCode = url.searchParams.get("vnp_ResponseCode");
-    if (responseCode === "00") {
-      localStorage.removeItem("cart");
+    if (responseCode) {
+      if (responseCode === "00") {
+        localStorage.removeItem("cart");
+        window.location.href = "#sauthanhtoan"
+      } else {
+        window.location.href = "#cart";
+        return;
+      }
     }
-    path = "sauthanhtoan";
+    return
   }
 
   const route = routes[path];
 
   if (!route) {
     document.title = "Không tìm thấy trang";
-    loadComponent("#content", "pages/404.html");
+    loadHTML("content", "pages/404.html");
     updateActiveNav();
-
     return;
   }
 
   document.title = route.title;
 
   if (route.file) {
-    loadComponent("#content", route.file);
+    loadHTML("content", route.file, route);
   } else {
     document.querySelector("#content").innerHTML = route.content;
   }
@@ -120,11 +100,22 @@ function checkLogin() {
 
     loginBtn.onclick = function (e) {
       e.preventDefault();
-      if (confirm("Bạn có chắc muốn đăng xuất?")) {
-        localStorage.removeItem("isLogin");
-        localStorage.removeItem("userEmail");
-        window.location.reload();
-      }
+      Swal.fire({
+        title: "Đăng xuất?",
+        text: "Bạn có chắc chắn muốn đăng xuất không?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Đăng xuất",
+        cancelButtonText: "Hủy",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          localStorage.removeItem("isLogin");
+          localStorage.removeItem("userEmail");
+          window.location.href = "/";
+        }
+      });
     };
   } else {
     loginBtnText.innerText = "Đăng nhập";
@@ -138,8 +129,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const cleanPath = location.pathname.replace(/\/index\.html$/i, "/");
     history.replaceState({}, "", cleanPath);
   }
-  loadComponent("#header", "components/header.html");
-  loadComponent("#footer", "components/footer.html");
+  loadHTML("header", "components/header.html");
+  loadHTML("footer", "components/footer.html");
 
   loadPage();
 });
