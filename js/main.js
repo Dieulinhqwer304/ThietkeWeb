@@ -28,13 +28,12 @@ async function loadPage() {
     if (responseCode) {
       if (responseCode === "00") {
         localStorage.removeItem("cart");
-        window.location.href = "#sauthanhtoan"
+        path = "sauthanhtoan"
       } else {
         window.location.href = "#cart";
         return;
       }
     }
-    return
   }
 
   const route = routes[path];

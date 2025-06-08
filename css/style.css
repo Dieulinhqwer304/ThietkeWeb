@@ -197,6 +197,10 @@ form a:hover {
   box-shadow: none;
 }
 
+.owl-nav{
+  display: none;
+}
+
 /* --------------- */
 /*gioithieu*/
 body {

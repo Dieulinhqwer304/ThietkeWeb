@@ -10,16 +10,16 @@ export function renderDetail() {
 
   if (imgEl) imgEl.alt = product.name;
 
-  const titleEl = document.querySelector("#chitietsanpham h1");
+  const titleEl = document.querySelector("#chitietsanpham .product-title");
   if (titleEl) titleEl.textContent = product.name.toUpperCase();
 
-  const priceEl = document.querySelector("#chitietsanpham .fs-5.fw-bold");
+  const priceEl = document.querySelector("#chitietsanpham .product-price");
   if (priceEl)
     priceEl.textContent = `${
       product.price ? product.price.toLocaleString() : 450000
     }₫`;
 
-  const descEl = document.querySelector("#chitietsanpham p.text-secondary");
+  const descEl = document.querySelector("#chitietsanpham .product-description");
   if (descEl) descEl.textContent = product.description;
 
   const addCart = document.getElementById("addCart");
